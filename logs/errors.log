@@ -1,0 +1,66 @@
+[21:45:52.637 ERROR] data driver not found
+[21:56:56.409 ERROR] error during connection to database
+[21:58:28.819 ERROR] error during connection to database
+[21:59:02.497 ERROR] error during connection to database
+[21:59:51.054 ERROR] error during connection to database
+[22:00:55.585 ERROR] error during connection to database
+[22:02:36.768 ERROR] error during connection to database
+[22:02:43.515 ERROR] error during connection to database
+[22:03:05.504 ERROR] error during connection to database
+[22:07:26.722 ERROR] error during connection to database
+[22:07:31.592 ERROR] error during connection to database
+[22:10:10.523 ERROR] error during connection to database
+[22:10:53.444 ERROR] error during connection to database
+[22:12:31.911 ERROR] error during connection to database
+[22:15:07.510 ERROR] error during connection to database
+[22:15:10.686 ERROR] nothing to load
+[22:16:24.859 ERROR] [help] no such user, or user login or password is incorrect
+[22:17:41.221 ERROR] [help] no such user, or user login or password is incorrect
+[22:19:13.717 ERROR] wrong command
+[22:19:13.717 ERROR] wrong command
+[22:19:13.718 ERROR] wrong command
+[22:19:13.718 ERROR] wrong command
+[22:19:13.718 ERROR] wrong command
+[22:26:30.909 ERROR] wrong command
+[16:33:17.739 ERROR] [help] no such user, or user login or password is incorrect
+[16:33:21.471 ERROR] [help] no such user, or user login or password is incorrect
+[16:38:27.924 ERROR] this command is only for server
+[16:38:38.614 ERROR] [show_users] no such user, or user login or password is incorrect
+[16:46:53.983 ERROR] nothing to load
+[15:59:54.505 ERROR] nothing to load
+[16:01:01.305 ERROR] [ass] [show] collection is empty
+[16:44:44.539 ERROR] nothing to load
+[17:24:27.411 ERROR] nothing to load
+[17:36:35.769 ERROR] [as] [login] login or password is incorrect
+[17:55:11.861 ERROR] nothing to load
+[17:55:47.801 ERROR] [ass] [add] cannot add to database
+[17:59:13.783 ERROR] nothing to load
+[17:59:19.699 ERROR] [log] wrong command
+[17:59:50.664 ERROR] [ass] [add] cannot add to database
+[18:00:58.285 ERROR] [ass] [show] collection is empty
+[18:06:30.036 ERROR] nothing to load
+[18:07:00.240 ERROR] [ass] [add] cannot add to database
+[18:08:35.864 ERROR] nothing to load
+[18:09:11.202 ERROR] [ass] [add] cannot add to database
+[18:11:44.406 ERROR] nothing to load
+[18:11:54.897 ERROR] [ass] [login] login or password is incorrect
+[18:12:30.050 ERROR] [ass] [add] cannot add to database
+[18:18:01.566 ERROR] nothing to load
+[18:19:48.704 ERROR] [ass] [add] cannot add to database
+[18:28:32.558 ERROR] nothing to load
+[18:28:48.587 ERROR] [as] [login] login or password is incorrect
+[18:29:24.184 ERROR] [ass] [add] cannot add to database
+[15:13:59.075 ERROR] nothing to load
+[15:14:07.897 ERROR] [дщпшт] wrong command
+[15:15:27.963 ERROR] [ass] [add] cannot add to database
+[15:16:25.656 ERROR] [ass] [register] user ass already exist
+[15:16:31.107 ERROR] [aue] [show] collection is empty
+[15:19:04.623 ERROR] [aue] [add] cannot add to database
+[15:20:08.510 ERROR] [aue] [add_if_max] cannot add to database
+[15:34:18.067 ERROR] nothing to load
+[15:34:48.781 ERROR] [ass] [add] cannot add to database
+[15:39:12.655 ERROR] nothing to load
+[15:39:21.567 ERROR] [as] [login] login or password is incorrect
+[15:39:23.466 ERROR] [ass] wrong command
+[15:39:59.341 ERROR] [ass] [add] cannot add to database
+[15:55:38.754 ERROR] error during connection to database

@@ -1,0 +1,557 @@
+[21:45:52.629 INFO ] no port passed by argument, hosted on 4445
+[21:45:52.637 ERROR] data driver not found
+[21:56:54.085 INFO ] no port passed by argument, hosted on 4445
+[21:56:56.409 ERROR] error during connection to database
+[21:58:28.819 ERROR] error during connection to database
+[21:59:00.162 INFO ] no port passed by argument, hosted on 4445
+[21:59:02.497 ERROR] error during connection to database
+[21:59:48.727 INFO ] no port passed by argument, hosted on 4445
+[21:59:51.054 ERROR] error during connection to database
+[22:00:18.382 INFO ] no port passed by argument, hosted on 4445
+[22:00:55.585 ERROR] error during connection to database
+[22:01:00.636 INFO ] no port passed by argument, hosted on 4445
+[22:02:36.768 ERROR] error during connection to database
+[22:02:41.187 INFO ] no port passed by argument, hosted on 4445
+[22:02:43.515 ERROR] error during connection to database
+[22:02:46.136 INFO ] no port passed by argument, hosted on 4445
+[22:03:05.504 ERROR] error during connection to database
+[22:03:07.404 INFO ] no port passed by argument, hosted on 4445
+[22:07:26.722 ERROR] error during connection to database
+[22:07:29.275 INFO ] no port passed by argument, hosted on 4445
+[22:07:31.592 ERROR] error during connection to database
+[22:10:10.485 INFO ] no port passed by argument, hosted on 4445
+[22:10:10.523 ERROR] error during connection to database
+[22:10:51.134 INFO ] no port passed by argument, hosted on 4445
+[22:10:53.444 ERROR] error during connection to database
+[22:12:29.602 INFO ] no port passed by argument, hosted on 4445
+[22:12:31.911 ERROR] error during connection to database
+[22:12:51.495 INFO ] no port passed by argument, hosted on 4445
+[22:15:07.510 ERROR] error during connection to database
+[22:15:10.300 INFO ] no port passed by argument, hosted on 4445
+[22:15:10.686 ERROR] nothing to load
+[22:15:10.702 TRACE] starting server
+[22:16:24.859 ERROR] [help] no such user, or user login or password is incorrect
+[22:17:23.642 TRACE] received request from /127.0.0.1:56663
+[22:17:23.655 INFO ] [ass] [register] user ass successfully registered
+[22:17:23.658 TRACE] sent response to /127.0.0.1:56663
+[22:17:41.221 ERROR] [help] no such user, or user login or password is incorrect
+[22:17:50.890 INFO ] [ass] [login] login successful
+[22:17:57.218 INFO ] [ass] [help] 
+
+help : show help for available commands
+
+info : Write to standard output information about the collection (type,
+initialization date, number of elements, etc.)
+
+show : print to standard output all elements of the collection in
+string representation
+
+add {element} : add a new element to the collection
+
+update id {element} : update the value of the collection element whose id
+equal to given
+
+remove_by_id id : remove an element from the collection by its id
+
+clear : clear the collection
+
+execute_script file_name : read and execute script from specified file.
+The script contains commands in the same form in which they are entered
+user is interactive.
+
+exit : exit the program
+
+remove_first : remove the first element from the collection
+
+add_if_max {element} : add a new element to the collection if its
+value is greater than the value of the largest element of this collection
+
+add_if_min {element} : add a new element to the collection if it
+the value is less than the smallest element of this collection
+
+group_counting_by_end_date : group the elements of the collection by
+the value of the endDate field, display the number of elements in each group
+
+filter_starts_with_name name : output elements, value of field name
+which starts with the given substring
+
+print_unique_salary : print the unique values of the salary field of all
+items in the collection
+
+register {user} : register a new user
+
+login {user} : login user
+
+show_users : show all registered users
+
+[22:19:13.716 TRACE] received request from /127.0.0.1:59496
+[22:19:13.716 TRACE] received request from /127.0.0.1:59497
+[22:19:13.717 TRACE] received request from /127.0.0.1:59499
+[22:19:13.717 TRACE] received request from /127.0.0.1:59498
+[22:19:13.716 TRACE] received request from /127.0.0.1:59495
+[22:19:13.717 ERROR] wrong command
+[22:19:13.717 ERROR] wrong command
+[22:19:13.718 ERROR] wrong command
+[22:19:13.718 ERROR] wrong command
+[22:19:13.718 ERROR] wrong command
+[22:19:13.719 TRACE] sent response to /127.0.0.1:59496
+[22:19:13.720 TRACE] sent response to /127.0.0.1:59497
+[22:19:13.720 TRACE] sent response to /127.0.0.1:59499
+[22:19:13.720 TRACE] sent response to /127.0.0.1:59495
+[22:19:13.721 TRACE] sent response to /127.0.0.1:59498
+[22:26:30.908 TRACE] received request from /127.0.0.1:56663
+[22:26:30.909 ERROR] wrong command
+[22:26:30.911 TRACE] sent response to /127.0.0.1:56663
+[22:28:36.090 TRACE] received request from /127.0.0.1:56663
+[22:28:36.116 INFO ] [ass] [add] 
+Added element: {
+  "id" : 1,
+  "name" : "addd",
+  "coordinates" : {"x" : 1.0, "y" : 1},
+  "creationDate" : "2022-06-10",
+  "salary" : 213321,
+  "endDate" : "2003-05-19",
+  "position" : "BAKER",
+  "status" : "REGULAR",
+  "organization" : {"fullName" : "assss", "type" : "GOVERNMENT"}
+  "userLogin" : ass
+}
+[22:28:36.118 TRACE] sent response to /127.0.0.1:56663
+[22:29:09.984 TRACE] received request from /127.0.0.1:56663
+[22:29:10.032 INFO ] [ass] [show] 
+[
+  {
+    "coordinates": {
+      "x": 1.0,
+      "y": 1
+    },
+    "position": "BAKER",
+    "organization": {
+      "fullName": "assss",
+      "type": "GOVERNMENT"
+    },
+    "id": 1,
+    "name": "addd",
+    "creationDate": "2022-06-10",
+    "salary": 213321,
+    "endDate": "2003-05-19",
+    "status": "REGULAR",
+    "userLogin": "ass"
+  }
+]
+[22:29:10.033 TRACE] sent response to /127.0.0.1:56663
+[22:29:14.118 TRACE] received request from /127.0.0.1:56663
+[22:29:14.121 INFO ] [ass] [info] Database of Worker, size: 1, initialization date: 2022-06-10T22:15:10.649992400
+[22:29:14.122 TRACE] sent response to /127.0.0.1:56663
+[16:33:12.456 INFO ] no port passed by argument, hosted on 4445
+[16:33:12.984 INFO ] collection successfully loaded
+[16:33:12.996 TRACE] starting server
+[16:33:17.739 ERROR] [help] no such user, or user login or password is incorrect
+[16:33:21.471 ERROR] [help] no such user, or user login or password is incorrect
+[16:33:53.909 TRACE] received request from /127.0.0.1:55892
+[16:33:53.926 INFO ] [aue] [register] user aue successfully registered
+[16:33:53.930 TRACE] sent response to /127.0.0.1:55892
+[16:35:09.639 TRACE] received request from /127.0.0.1:55892
+[16:35:09.662 INFO ] [aue] [add] 
+Added element: {
+  "id" : 2,
+  "name" : "sss",
+  "coordinates" : {"x" : 3.0, "y" : 3},
+  "creationDate" : "2022-06-14",
+  "salary" : 232,
+  "endDate" : "2003-11-22",
+  "position" : "RAP",
+  "status" : "REGULAR",
+  "organization" : {"fullName" : "23123", "type" : "PUBLIC"}
+  "userLogin" : aue
+}
+[16:35:09.663 TRACE] sent response to /127.0.0.1:55892
+[16:38:27.922 TRACE] received request from /127.0.0.1:55892
+[16:38:27.924 ERROR] this command is only for server
+[16:38:27.925 TRACE] sent response to /127.0.0.1:55892
+[16:38:38.614 ERROR] [show_users] no such user, or user login or password is incorrect
+[16:39:00.762 INFO ] [rus] [register] user rus successfully registered
+[16:39:08.219 INFO ] [rus] [show_users] 
+
+ass
+aue
+rus
+
+[16:40:14.859 INFO ] [rus] [help] 
+
+help : show help for available commands
+
+info : Write to standard output information about the collection (type,
+initialization date, number of elements, etc.)
+
+show : print to standard output all elements of the collection in
+string representation
+
+add {element} : add a new element to the collection
+
+update id {element} : update the value of the collection element whose id
+equal to given
+
+remove_by_id id : remove an element from the collection by its id
+
+clear : clear the collection
+
+execute_script file_name : read and execute script from specified file.
+The script contains commands in the same form in which they are entered
+user is interactive.
+
+exit : exit the program
+
+remove_first : remove the first element from the collection
+
+add_if_max {element} : add a new element to the collection if its
+value is greater than the value of the largest element of this collection
+
+add_if_min {element} : add a new element to the collection if it
+the value is less than the smallest element of this collection
+
+group_counting_by_end_date : group the elements of the collection by
+the value of the endDate field, display the number of elements in each group
+
+filter_starts_with_name name : output elements, value of field name
+which starts with the given substring
+
+print_unique_salary : print the unique values of the salary field of all
+items in the collection
+
+register {user} : register a new user
+
+login {user} : login user
+
+show_users : show all registered users
+
+[16:41:39.123 INFO ] [rus] [print_unique_salary] 
+213321
+232
+
+[16:44:16.926 INFO ] no port passed by argument, hosted on 4445
+[16:44:17.252 WARN ] 1 elements are damaged
+[16:44:17.272 TRACE] starting server
+[16:44:40.129 TRACE] received request from /127.0.0.1:57141
+[16:44:40.144 INFO ] [dude] [register] user dude successfully registered
+[16:44:40.147 TRACE] sent response to /127.0.0.1:57141
+[16:46:53.645 INFO ] no port passed by argument, hosted on 4445
+[16:46:53.983 ERROR] nothing to load
+[16:46:54.001 TRACE] starting server
+[16:47:15.820 TRACE] received request from /127.0.0.1:55188
+[16:47:15.833 INFO ] [ass] [login] login successful
+[16:47:15.836 TRACE] sent response to /127.0.0.1:55188
+[16:48:08.825 TRACE] received request from /127.0.0.1:55188
+[16:48:08.845 INFO ] [ass] [add] 
+Added element: {
+  "id" : 3,
+  "name" : "ffu",
+  "coordinates" : {"x" : 1.0, "y" : 1},
+  "creationDate" : "2022-06-14",
+  "salary" : 213,
+  "endDate" : "2001-01-01",
+  "genre" : "POP",
+  "status" : "REGULAR",
+  "organization" : {"fullName" : "sfsdf", "type" : "PUBLIC"}
+  "userLogin" : ass
+}
+[16:48:08.845 TRACE] sent response to /127.0.0.1:55188
+[16:48:22.535 TRACE] received request from /127.0.0.1:55188
+[16:48:22.586 INFO ] [ass] [show] 
+[
+  {
+    "coordinates": {
+      "x": 1.0,
+      "y": 1
+    },
+    "genre": "POP",
+    "organization": {
+      "fullName": "sfsdf",
+      "type": "PUBLIC"
+    },
+    "id": 3,
+    "name": "ffu",
+    "creationDate": "2022-06-14",
+    "salary": 213,
+    "endDate": "2001-01-01",
+    "status": "REGULAR",
+    "userLogin": "ass"
+  }
+]
+[16:48:22.587 TRACE] sent response to /127.0.0.1:55188
+[15:59:54.170 INFO ] no port passed by argument, hosted on 5432
+[15:59:54.505 ERROR] nothing to load
+[15:59:54.518 TRACE] starting server
+[16:00:56.407 INFO ] [ass] [login] login successful
+[16:01:01.305 ERROR] [ass] [show] collection is empty
+[16:01:39.955 INFO ] [ass] [add] 
+Added element: {
+  "id" : 4,
+  "name" : "d",
+  "coordinates" : {"x" : 2.0, "y" : 2},
+  "creationDate" : "2022-06-16",
+  "salary" : 2144,
+  "endDate" : "2001-11-11",
+  "genre" : "POP",
+  "status" : "REGULAR",
+  "organization" : {"fullName" : "dfsfdsg", "type" : "PUBLIC"}
+  "userLogin" : ass
+}
+[16:01:43.795 INFO ] [ass] [show] 
+[
+  {
+    "coordinates": {
+      "x": 2.0,
+      "y": 2
+    },
+    "genre": "POP",
+    "organization": {
+      "fullName": "dfsfdsg",
+      "type": "PUBLIC"
+    },
+    "id": 4,
+    "name": "d",
+    "creationDate": "2022-06-16",
+    "salary": 2144,
+    "endDate": "2001-11-11",
+    "status": "REGULAR",
+    "userLogin": "ass"
+  }
+]
+[16:01:48.597 INFO ] [ass] [help] 
+
+help : show help for available commands
+
+info : Write to standard output information about the collection (type,
+initialization date, number of elements, etc.)
+
+show : print to standard output all elements of the collection in
+string representation
+
+add {element} : add a new element to the collection
+
+update id {element} : update the value of the collection element whose id
+equal to given
+
+remove_by_id id : remove an element from the collection by its id
+
+clear : clear the collection
+
+execute_script file_name : read and execute script from specified file.
+The script contains commands in the same form in which they are entered
+user is interactive.
+
+exit : exit the program
+
+remove_first : remove the first element from the collection
+
+add_if_max {element} : add a new element to the collection if its
+value is greater than the value of the largest element of this collection
+
+add_if_min {element} : add a new element to the collection if it
+the value is less than the smallest element of this collection
+
+group_counting_by_end_date : group the elements of the collection by
+the value of the endDate field, display the number of elements in each group
+
+filter_starts_with_name name : output elements, value of field name
+which starts with the given substring
+
+print_unique_salary : print the unique values of the salary field of all
+items in the collection
+
+register {user} : register a new user
+
+login {user} : login user
+
+show_users : show all registered users
+
+[16:44:44.032 INFO ] no port passed by argument, hosted on 5432
+[16:44:44.539 ERROR] nothing to load
+[16:44:44.566 TRACE] starting server
+[16:45:26.228 INFO ] [ass] [login] login successful
+[17:24:27.062 INFO ] no port passed by argument, hosted on 5432
+[17:24:27.411 ERROR] nothing to load
+[17:24:27.425 TRACE] starting server
+[17:28:41.867 TRACE] received request from /127.0.0.1:64244
+[17:28:41.881 INFO ] [ass] [login] login successful
+[17:28:41.885 TRACE] sent response to /127.0.0.1:64244
+[17:36:35.767 TRACE] received request from /127.0.0.1:57776
+[17:36:35.769 ERROR] [as] [login] login or password is incorrect
+[17:36:35.770 TRACE] sent response to /127.0.0.1:57776
+[17:36:43.868 TRACE] received request from /127.0.0.1:57776
+[17:36:43.870 INFO ] [ass] [login] login successful
+[17:36:43.870 TRACE] sent response to /127.0.0.1:57776
+[17:55:11.528 INFO ] no port passed by argument, hosted on 5432
+[17:55:11.861 ERROR] nothing to load
+[17:55:11.880 TRACE] starting server
+[17:55:22.452 INFO ] [ass] [login] login successful
+[17:55:47.801 ERROR] [ass] [add] cannot add to database
+[17:59:13.393 INFO ] no port passed by argument, hosted on 5432
+[17:59:13.783 ERROR] nothing to load
+[17:59:13.806 TRACE] starting server
+[17:59:19.699 ERROR] [log] wrong command
+[17:59:25.635 INFO ] [ass] [login] login successful
+[17:59:50.664 ERROR] [ass] [add] cannot add to database
+[18:00:58.285 ERROR] [ass] [show] collection is empty
+[18:06:29.704 INFO ] no port passed by argument, hosted on 5432
+[18:06:30.036 ERROR] nothing to load
+[18:06:30.054 TRACE] starting server
+[18:06:36.170 INFO ] [ass] [login] login successful
+[18:07:00.240 ERROR] [ass] [add] cannot add to database
+[18:08:35.543 INFO ] no port passed by argument, hosted on 5432
+[18:08:35.864 ERROR] nothing to load
+[18:08:35.883 TRACE] starting server
+[18:08:41.830 INFO ] [ass] [login] login successful
+[18:09:11.202 ERROR] [ass] [add] cannot add to database
+[18:11:44.065 INFO ] no port passed by argument, hosted on 5432
+[18:11:44.406 ERROR] nothing to load
+[18:11:44.422 TRACE] starting server
+[18:11:54.897 ERROR] [ass] [login] login or password is incorrect
+[18:12:05.465 INFO ] [ass] [register] user ass successfully registered
+[18:12:30.050 ERROR] [ass] [add] cannot add to database
+[18:17:45.488 INFO ] no port passed by argument, hosted on 5432
+[18:18:01.197 INFO ] no port passed by argument, hosted on 5432
+[18:18:01.566 ERROR] nothing to load
+[18:18:01.581 TRACE] starting server
+[18:18:15.459 INFO ] [ass] [login] login successful
+[18:19:48.704 ERROR] [ass] [add] cannot add to database
+[18:28:32.261 INFO ] no port passed by argument, hosted on 5432
+[18:28:32.558 ERROR] nothing to load
+[18:28:32.574 TRACE] starting server
+[18:28:48.587 ERROR] [as] [login] login or password is incorrect
+[18:28:55.333 INFO ] [ass] [login] login successful
+[18:29:24.184 ERROR] [ass] [add] cannot add to database
+[15:13:58.695 INFO ] no port passed by argument, hosted on 5432
+[15:13:59.075 ERROR] nothing to load
+[15:13:59.095 TRACE] starting server
+[15:14:07.897 ERROR] [дщпшт] wrong command
+[15:14:17.054 INFO ] [ass] [login] login successful
+[15:14:36.814 INFO ] [ass] [help] 
+
+help : show help for available commands
+
+info : Write to standard output information about the collection (type,
+initialization date, number of elements, etc.)
+
+show : print to standard output all elements of the collection in
+string representation
+
+add {element} : add a new element to the collection
+
+update id {element} : update the value of the collection element whose id
+equal to given
+
+remove_by_id id : remove an element from the collection by its id
+
+clear : clear the collection
+
+execute_script file_name : read and execute script from specified file.
+The script contains commands in the same form in which they are entered
+user is interactive.
+
+exit : exit the program
+
+remove_first : remove the first element from the collection
+
+add_if_max {element} : add a new element to the collection if its
+value is greater than the value of the largest element of this collection
+
+add_if_min {element} : add a new element to the collection if it
+the value is less than the smallest element of this collection
+
+group_counting_by_end_date : group the elements of the collection by
+the value of the endDate field, display the number of elements in each group
+
+filter_starts_with_name name : output elements, value of field name
+which starts with the given substring
+
+print_unique_salary : print the unique values of the salary field of all
+items in the collection
+
+register {user} : register a new user
+
+login {user} : login user
+
+show_users : show all registered users
+
+[15:15:27.963 ERROR] [ass] [add] cannot add to database
+[15:16:11.090 INFO ] [aue] [register] user aue successfully registered
+[15:16:25.656 ERROR] [ass] [register] user ass already exist
+[15:16:31.107 ERROR] [aue] [show] collection is empty
+[15:16:35.116 INFO ] [aue] [help] 
+
+help : show help for available commands
+
+info : Write to standard output information about the collection (type,
+initialization date, number of elements, etc.)
+
+show : print to standard output all elements of the collection in
+string representation
+
+add {element} : add a new element to the collection
+
+update id {element} : update the value of the collection element whose id
+equal to given
+
+remove_by_id id : remove an element from the collection by its id
+
+clear : clear the collection
+
+execute_script file_name : read and execute script from specified file.
+The script contains commands in the same form in which they are entered
+user is interactive.
+
+exit : exit the program
+
+remove_first : remove the first element from the collection
+
+add_if_max {element} : add a new element to the collection if its
+value is greater than the value of the largest element of this collection
+
+add_if_min {element} : add a new element to the collection if it
+the value is less than the smallest element of this collection
+
+group_counting_by_end_date : group the elements of the collection by
+the value of the endDate field, display the number of elements in each group
+
+filter_starts_with_name name : output elements, value of field name
+which starts with the given substring
+
+print_unique_salary : print the unique values of the salary field of all
+items in the collection
+
+register {user} : register a new user
+
+login {user} : login user
+
+show_users : show all registered users
+
+[15:16:43.079 INFO ] [aue] [show_users] 
+
+ass
+aue
+
+[15:18:35.728 TRACE] received request from /127.0.0.1:64566
+[15:18:35.738 INFO ] [aue] [login] login successful
+[15:18:35.741 TRACE] sent response to /127.0.0.1:64566
+[15:19:04.615 TRACE] received request from /127.0.0.1:64566
+[15:19:04.623 ERROR] [aue] [add] cannot add to database
+[15:19:04.624 TRACE] sent response to /127.0.0.1:64566
+[15:20:08.506 TRACE] received request from /127.0.0.1:64566
+[15:20:08.510 ERROR] [aue] [add_if_max] cannot add to database
+[15:20:08.511 TRACE] sent response to /127.0.0.1:64566
+[15:34:17.729 INFO ] no port passed by argument, hosted on 5432
+[15:34:18.067 ERROR] nothing to load
+[15:34:18.088 TRACE] starting server
+[15:34:25.051 INFO ] [ass] [login] login successful
+[15:34:48.781 ERROR] [ass] [add] cannot add to database
+[15:39:12.339 INFO ] no port passed by argument, hosted on 5432
+[15:39:12.655 ERROR] nothing to load
+[15:39:12.671 TRACE] starting server
+[15:39:21.567 ERROR] [as] [login] login or password is incorrect
+[15:39:23.466 ERROR] [ass] wrong command
+[15:39:28.272 INFO ] [ass] [login] login successful
+[15:39:59.341 ERROR] [ass] [add] cannot add to database
+[15:55:36.444 INFO ] no port passed by argument, hosted on 4445
+[15:55:38.754 ERROR] error during connection to database
