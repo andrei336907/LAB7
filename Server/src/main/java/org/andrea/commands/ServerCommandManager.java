@@ -3,11 +3,11 @@ package org.andrea.commands;
 
 import org.andrea.auth.User;
 import org.andrea.auth.UserManager;
-import org.andrea.collection.WorkerManager;
+import org.andrea.collection.MusicBandManager;
 import org.andrea.connection.AnswerMsg;
 import org.andrea.connection.Request;
 import org.andrea.connection.Response;
-import org.andrea.data.Worker;
+import org.andrea.data.MusicBand;
 import org.andrea.exceptions.AuthException;
 import org.andrea.exceptions.CommandException;
 import org.andrea.exceptions.ConnectionException;
@@ -21,7 +21,7 @@ public class ServerCommandManager extends CommandManager {
 
     public ServerCommandManager(Server serv) {
         server = serv;
-        WorkerManager collectionManager = server.getCollectionManager();
+        MusicBandManager collectionManager = server.getCollectionManager();
         userManager = server.getUserManager();
         addCommand(new ExitCommand());
         addCommand(new HelpCommand());
@@ -37,7 +37,7 @@ public class ServerCommandManager extends CommandManager {
         addCommand(new ShowCommand(collectionManager));
         addCommand(new FilterStartsWithNameCommand(collectionManager));
         addCommand(new GroupCountingByEndDateCommand(collectionManager));
-        addCommand(new PrintUniqueSalaryCommand(collectionManager));
+        addCommand(new PrintUniqueFollowersCommand(collectionManager));
 
         addCommand(new LoginCommand(userManager));
         addCommand(new RegisterCommand(userManager));
@@ -65,9 +65,9 @@ public class ServerCommandManager extends CommandManager {
                 if (user == null) throw new AuthException();
                 if (!userManager.isValid(user)) throw new AuthException();
 
-                //link user to worker
-                Worker worker = msg.getWorker();
-                if (worker != null) worker.setUser(user);
+                //link user to musicBand
+                MusicBand musicBand = msg.getBand();
+                if (musicBand != null) musicBand.setUser(user);
             }
 
             //executing command

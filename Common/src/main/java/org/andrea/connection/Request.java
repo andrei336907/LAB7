@@ -2,14 +2,14 @@ package org.andrea.connection;
 
 
 import org.andrea.auth.User;
-import org.andrea.data.Worker;
+import org.andrea.data.MusicBand;
 
 import java.io.Serializable;
 
 public interface Request extends Serializable {
     String getStringArg();
 
-    Worker getWorker();
+    MusicBand getBand();
 
     String getCommandName();
 

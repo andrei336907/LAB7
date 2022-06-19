@@ -50,12 +50,12 @@ public interface InputManager {
     Coordinates readCoords() throws InvalidNumberException;
 
     /**
-     * reads salary from input
+     * reads followers from input
      *
      * @return
      * @throws InvalidNumberException
      */
-    long readSalary() throws InvalidNumberException;
+    long readFollowers() throws InvalidNumberException;
 
     /**
      * reads endDate from input
@@ -71,7 +71,7 @@ public interface InputManager {
      * @return
      * @throws InvalidEnumException
      */
-    Genre readPosition() throws InvalidEnumException;
+    Genre readGenre() throws InvalidEnumException;
 
     /**
      * reads status from input
@@ -87,7 +87,7 @@ public interface InputManager {
      * @return
      * @throws InvalidEnumException
      */
-    OrganizationType readOrganizationType() throws InvalidEnumException;
+    AlbumType readAlbumType() throws InvalidEnumException;
 
     /**
      * reads organization from input
@@ -95,15 +95,15 @@ public interface InputManager {
      * @return
      * @throws InvalidDataException
      */
-    Organization readOrganization() throws InvalidDataException;
+    BestAlbum readAlbum() throws InvalidDataException;
 
     /**
-     * reads Worker from input
+     * reads MusicBand from input
      *
      * @return
      * @throws InvalidDataException
      */
-    Worker readWorker() throws InvalidDataException;
+    MusicBand readBand() throws InvalidDataException;
 
     /**
      * reads command-argument pair from input

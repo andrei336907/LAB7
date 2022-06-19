@@ -64,3 +64,73 @@
 [15:39:23.466 ERROR] [ass] wrong command
 [15:39:59.341 ERROR] [ass] [add] cannot add to database
 [15:55:38.754 ERROR] error during connection to database
+[16:00:05.147 ERROR] nothing to load
+[16:00:09.868 ERROR] [help] no such user, or user login or password is incorrect
+[16:34:11.309 ERROR] nothing to load
+[16:35:05.196 FATAL] [exit] shutting down...
+[16:52:06.076 ERROR] nothing to load
+[16:58:00.565 ERROR] nothing to load
+[17:08:17.764 ERROR] nothing to load
+[17:20:46.824 ERROR] nothing to load
+[17:28:29.404 ERROR] nothing to load
+[17:28:39.608 ERROR] cannot create musicBand database
+[17:28:44.473 ERROR] cannot create musicBand database
+[17:29:39.987 ERROR] cannot create musicBand database
+[17:32:24.670 ERROR] cannot create musicBand database
+[17:38:31.719 ERROR] cannot create musicBand database
+[17:45:46.644 ERROR] nothing to load
+[17:46:01.134 FATAL] [exit] shutting down...
+[18:15:15.391 ERROR] cannot create worker database
+[18:27:51.589 ERROR] cannot create bands database
+[18:39:59.497 ERROR] nothing to load
+[18:40:09.181 ERROR] [ass] [login] login or password is incorrect
+[18:40:38.971 ERROR] [add] no such user, or user login or password is incorrect
+[18:41:21.069 ERROR] [ass] [add] cannot add to database
+[19:07:31.474 ERROR] nothing to load
+[19:07:52.137 ERROR] [ass] [register] user ass already exist
+[19:10:08.820 ERROR] [andrew2003] [login] login or password is incorrect
+[19:16:24.690 ERROR] [help] no such user, or user login or password is incorrect
+[19:18:06.152 ERROR] [hel] wrong command
+[22:00:37.924 ERROR] nothing to load
+[22:12:28.208 ERROR] [штащ] wrong command
+[22:12:31.110 ERROR] Can't get user from database.
+[22:12:31.110 ERROR] [ass] [info] no such user, or user login or password is incorrect
+[22:12:45.679 ERROR] [ass] [login] cannot get SQL statement
+[22:13:07.747 ERROR] [dude] [register] cannot get SQL statement
+[22:13:32.306 ERROR] [ass] [login] cannot get SQL statement
+[22:14:11.717 ERROR] error during connection to database
+[22:15:47.612 ERROR] error during connection to database
+[14:14:02.648 ERROR] error during connection to database
+[14:31:01.583 ERROR] error during connection to database
+[14:32:00.300 ERROR] error during connection to database
+[14:36:29.709 ERROR] error during connection to database
+[14:54:44.183 ERROR] [ass] [register] user ass already exist
+[14:55:23.914 ERROR] this command is only for server
+[14:58:09.796 ERROR] wrong command
+[15:00:07.685 ERROR] wrong command
+[15:00:17.387 ERROR] wrong command
+[15:00:38.833 ERROR] [zachet] [remove_by_id] no such id #1
+[15:00:46.287 ERROR] [zachet] [remove_by_id] no such id #2
+[15:01:18.105 ERROR] [zachet] [remove_by_id] you dont have permission, element was created by ass
+[15:01:59.739 ERROR] [zachet] [remove_by_id] you dont have permission, element was created by ass
+[15:02:38.474 ERROR] [zachet] [remove_first] you dont have permission, element was created by ass
+[15:07:13.155 ERROR] [andrew2003] [update] missed command argument
+[15:14:57.985 ERROR] wrong command
+[15:14:57.986 ERROR] wrong command
+[15:14:57.986 ERROR] wrong command
+[15:14:57.987 ERROR] wrong command
+[15:14:57.987 ERROR] wrong command
+[15:37:47.900 ERROR] [дщпшт] wrong command
+[15:38:50.174 ERROR] wrong command
+[15:38:50.174 ERROR] wrong command
+[15:38:50.176 ERROR] wrong command
+[15:38:50.177 ERROR] wrong command
+[15:38:50.179 ERROR] wrong command
+[15:52:51.566 ERROR] [execute_script] cannot find file
+[17:37:26.123 ERROR] wrong command
+[17:37:26.124 ERROR] wrong command
+[17:37:26.124 ERROR] wrong command
+[17:37:26.125 ERROR] wrong command
+[17:37:26.124 ERROR] wrong command
+[19:15:46.020 ERROR] [ырщц] wrong command
+[19:17:13.059 ERROR] [aee] [login] login or password is incorrect

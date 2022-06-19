@@ -23,7 +23,7 @@ public class TestMultiThread {
             c.send(new CommandMsg("Andrew", null, null));
         }
 
-        new Client("localhost", 4445).start();
+        new Client("localhost", 5432).start();
 
     }
 }

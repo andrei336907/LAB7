@@ -3,16 +3,16 @@ package org.andrea.commands;
 
 
 import org.andrea.auth.User;
-import org.andrea.collection.WorkerManager;
+import org.andrea.collection.MusicBandManager;
 import org.andrea.exceptions.*;
 
 import static org.andrea.utils.Parser.parseId;
 
 
 public class UpdateCommand extends CommandImpl {
-    private final WorkerManager collectionManager;
+    private final MusicBandManager collectionManager;
 
-    public UpdateCommand(WorkerManager cm) {
+    public UpdateCommand(MusicBandManager cm) {
         super("update", CommandType.NORMAL);
         collectionManager = cm;
     }
@@ -22,7 +22,7 @@ public class UpdateCommand extends CommandImpl {
     public String execute() throws InvalidDataException, AuthException {
         User user = getArgument().getUser();
         if (collectionManager.getCollection().isEmpty()) throw new EmptyCollectionException();
-        if (!hasStringArg() || !hasWorkerArg()) throw new MissedCommandArgumentException();
+        if (!hasStringArg() || !hasBandArg()) throw new MissedCommandArgumentException();
         Integer id = parseId(getStringArg());
         if (!collectionManager.checkID(id)) throw new InvalidCommandArgumentException("no such id #" + getStringArg());
 
@@ -32,7 +32,7 @@ public class UpdateCommand extends CommandImpl {
         if (workerCreatorLogin == null || !workerCreatorLogin.equals(owner))
             throw new AuthException("you dont have permission, element was created by " + owner);
 
-        collectionManager.updateByID(id, getWorkerArg());
+        collectionManager.updateByID(id, getBandArg());
         return "element #" + id + " updated";
     }
 

@@ -2,15 +2,15 @@ package org.andrea.commands;
 
 
 import org.andrea.auth.User;
-import org.andrea.collection.WorkerManager;
+import org.andrea.collection.MusicBandManager;
 import org.andrea.exceptions.*;
 
 import static org.andrea.utils.Parser.parseId;
 
 public class RemoveByIdCommand extends CommandImpl {
-    private final WorkerManager collectionManager;
+    private final MusicBandManager collectionManager;
 
-    public RemoveByIdCommand(WorkerManager cm) {
+    public RemoveByIdCommand(MusicBandManager cm) {
         super("remove_by_id", CommandType.NORMAL);
         collectionManager = cm;
     }

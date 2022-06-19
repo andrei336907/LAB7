@@ -75,7 +75,7 @@ the value of the endDate field, display the number of elements in each group
 filter_starts_with_name name : output elements, value of field name
 which starts with the given substring
 
-print_unique_salary : print the unique values of the salary field of all
+print_unique_followers : print the unique values of the followers field of all
 items in the collection
 
 register {user} : register a new user
@@ -109,11 +109,11 @@ Added element: {
   "name" : "addd",
   "coordinates" : {"x" : 1.0, "y" : 1},
   "creationDate" : "2022-06-10",
-  "salary" : 213321,
+  "followers" : 213321,
   "endDate" : "2003-05-19",
   "position" : "BAKER",
   "status" : "REGULAR",
-  "organization" : {"fullName" : "assss", "type" : "GOVERNMENT"}
+  "bestAlbum" : {"fullName" : "assss", "type" : "GOVERNMENT"}
   "userLogin" : ass
 }
 [22:28:36.118 TRACE] sent response to /127.0.0.1:56663
@@ -126,14 +126,14 @@ Added element: {
       "y": 1
     },
     "position": "BAKER",
-    "organization": {
+    "bestAlbum": {
       "fullName": "assss",
       "type": "GOVERNMENT"
     },
     "id": 1,
     "name": "addd",
     "creationDate": "2022-06-10",
-    "salary": 213321,
+    "followers": 213321,
     "endDate": "2003-05-19",
     "status": "REGULAR",
     "userLogin": "ass"
@@ -158,11 +158,11 @@ Added element: {
   "name" : "sss",
   "coordinates" : {"x" : 3.0, "y" : 3},
   "creationDate" : "2022-06-14",
-  "salary" : 232,
+  "followers" : 232,
   "endDate" : "2003-11-22",
   "position" : "RAP",
   "status" : "REGULAR",
-  "organization" : {"fullName" : "23123", "type" : "PUBLIC"}
+  "bestAlbum" : {"fullName" : "23123", "type" : "PUBLIC"}
   "userLogin" : aue
 }
 [16:35:09.663 TRACE] sent response to /127.0.0.1:55892
@@ -216,7 +216,7 @@ the value of the endDate field, display the number of elements in each group
 filter_starts_with_name name : output elements, value of field name
 which starts with the given substring
 
-print_unique_salary : print the unique values of the salary field of all
+print_unique_followers : print the unique values of the followers field of all
 items in the collection
 
 register {user} : register a new user
@@ -225,7 +225,7 @@ login {user} : login user
 
 show_users : show all registered users
 
-[16:41:39.123 INFO ] [rus] [print_unique_salary] 
+[16:41:39.123 INFO ] [rus] [print_unique_followers]
 213321
 232
 
@@ -248,11 +248,11 @@ Added element: {
   "name" : "ffu",
   "coordinates" : {"x" : 1.0, "y" : 1},
   "creationDate" : "2022-06-14",
-  "salary" : 213,
+  "followers" : 213,
   "endDate" : "2001-01-01",
   "genre" : "POP",
   "status" : "REGULAR",
-  "organization" : {"fullName" : "sfsdf", "type" : "PUBLIC"}
+  "bestAlbum" : {"fullName" : "sfsdf", "type" : "PUBLIC"}
   "userLogin" : ass
 }
 [16:48:08.845 TRACE] sent response to /127.0.0.1:55188
@@ -265,14 +265,14 @@ Added element: {
       "y": 1
     },
     "genre": "POP",
-    "organization": {
+    "bestAlbum": {
       "fullName": "sfsdf",
       "type": "PUBLIC"
     },
     "id": 3,
     "name": "ffu",
     "creationDate": "2022-06-14",
-    "salary": 213,
+    "followers": 213,
     "endDate": "2001-01-01",
     "status": "REGULAR",
     "userLogin": "ass"
@@ -290,11 +290,11 @@ Added element: {
   "name" : "d",
   "coordinates" : {"x" : 2.0, "y" : 2},
   "creationDate" : "2022-06-16",
-  "salary" : 2144,
+  "followers" : 2144,
   "endDate" : "2001-11-11",
   "genre" : "POP",
   "status" : "REGULAR",
-  "organization" : {"fullName" : "dfsfdsg", "type" : "PUBLIC"}
+  "bestAlbum" : {"fullName" : "dfsfdsg", "type" : "PUBLIC"}
   "userLogin" : ass
 }
 [16:01:43.795 INFO ] [ass] [show] 
@@ -305,14 +305,14 @@ Added element: {
       "y": 2
     },
     "genre": "POP",
-    "organization": {
+    "bestAlbum": {
       "fullName": "dfsfdsg",
       "type": "PUBLIC"
     },
     "id": 4,
     "name": "d",
     "creationDate": "2022-06-16",
-    "salary": 2144,
+    "followers": 2144,
     "endDate": "2001-11-11",
     "status": "REGULAR",
     "userLogin": "ass"
@@ -357,7 +357,7 @@ the value of the endDate field, display the number of elements in each group
 filter_starts_with_name name : output elements, value of field name
 which starts with the given substring
 
-print_unique_salary : print the unique values of the salary field of all
+print_unique_salary : print the unique values of the followers field of all
 items in the collection
 
 register {user} : register a new user
@@ -466,7 +466,7 @@ the value of the endDate field, display the number of elements in each group
 filter_starts_with_name name : output elements, value of field name
 which starts with the given substring
 
-print_unique_salary : print the unique values of the salary field of all
+print_unique_salary : print the unique values of the followers field of all
 items in the collection
 
 register {user} : register a new user
@@ -518,7 +518,7 @@ the value of the endDate field, display the number of elements in each group
 filter_starts_with_name name : output elements, value of field name
 which starts with the given substring
 
-print_unique_salary : print the unique values of the salary field of all
+print_unique_salary : print the unique values of the followers field of all
 items in the collection
 
 register {user} : register a new user
@@ -555,3 +555,2233 @@ aue
 [15:39:59.341 ERROR] [ass] [add] cannot add to database
 [15:55:36.444 INFO ] no port passed by argument, hosted on 4445
 [15:55:38.754 ERROR] error during connection to database
+[16:00:04.820 INFO ] no port passed by argument, hosted on 5432
+[16:00:05.147 ERROR] nothing to load
+[16:00:05.173 TRACE] starting server
+[16:00:09.868 ERROR] [help] no such user, or user login or password is incorrect
+[16:00:22.096 INFO ] [ass] [register] user ass successfully registered
+[16:00:56.379 INFO ] [ass] [add] 
+Added element: {
+  "id" : 1,
+  "name" : "dsadas",
+  "coordinates" : {"x" : 31231.0, "y" : 1231},
+  "creationDate" : "2022-06-18",
+  "followers" : 312312,
+  "endDate" : "2003-11-11",
+  "genre" : "POP",
+  "status" : "REGULAR",
+  "bestAlbum" : {"fullName" : "asfdsf", "type" : "PUBLIC"}
+  "userLogin" : ass
+}
+[16:34:10.966 INFO ] no port passed by argument, hosted on 5432
+[16:34:11.309 ERROR] nothing to load
+[16:34:11.330 TRACE] starting server
+[16:34:19.384 INFO ] [ass] [login] login successful
+[16:34:59.817 INFO ] [ass] [add] 
+Added element: {
+  "id" : 2,
+  "name" : "dsada",
+  "coordinates" : {"x" : 213.0, "y" : 213},
+  "creationDate" : "2022-06-18",
+  "followers" : 312,
+  "endDate" : "2003-11-11",
+  "genre" : "POP",
+  "status" : "REGULAR",
+  "bestAlbum" : {"fullName" : "Nsa", "type" : "PUBLIC"}
+  "userLogin" : ass
+}
+[16:35:05.196 FATAL] [exit] shutting down...
+[16:35:05.197 INFO ] connection to database is interrupted
+[16:52:05.718 INFO ] no port passed by argument, hosted on 5432
+[16:52:06.076 ERROR] nothing to load
+[16:52:06.095 TRACE] starting server
+[16:52:13.324 INFO ] [ass] [login] login successful
+[16:52:48.549 INFO ] [ass] [add] 
+Added element: {
+  "id" : 3,
+  "name" : "eee",
+  "coordinates" : {"x" : 21.0, "y" : 11},
+  "creationDate" : "2022-06-18",
+  "followers" : 32131,
+  "endDate" : "2003-11-11",
+  "genre" : "POP",
+  "status" : "REGULAR",
+  "bestAlbum" : {"fullName" : "sdf", "type" : "PUBLIC"}
+  "userLogin" : ass
+}
+[16:58:00.237 INFO ] no port passed by argument, hosted on 5432
+[16:58:00.565 ERROR] nothing to load
+[16:58:00.585 TRACE] starting server
+[16:58:08.671 INFO ] [ass] [login] login successful
+[17:08:17.424 INFO ] no port passed by argument, hosted on 5432
+[17:08:17.764 ERROR] nothing to load
+[17:08:17.788 TRACE] starting server
+[17:08:23.755 INFO ] [ass] [login] login successful
+[17:20:46.519 INFO ] no port passed by argument, hosted on 5432
+[17:20:46.824 ERROR] nothing to load
+[17:20:46.840 TRACE] starting server
+[17:28:29.063 INFO ] no port passed by argument, hosted on 5432
+[17:28:29.404 ERROR] nothing to load
+[17:28:29.424 TRACE] starting server
+[17:28:39.286 INFO ] no port passed by argument, hosted on 5432
+[17:28:39.608 ERROR] cannot create musicBand database
+[17:28:44.183 INFO ] no port passed by argument, hosted on 5432
+[17:28:44.473 ERROR] cannot create musicBand database
+[17:29:39.589 INFO ] no port passed by argument, hosted on 5432
+[17:29:39.987 ERROR] cannot create musicBand database
+[17:32:24.362 INFO ] no port passed by argument, hosted on 5432
+[17:32:24.670 ERROR] cannot create musicBand database
+[17:38:31.415 INFO ] no port passed by argument, hosted on 5432
+[17:38:31.719 ERROR] cannot create musicBand database
+[17:45:46.317 INFO ] no port passed by argument, hosted on 5432
+[17:45:46.644 ERROR] nothing to load
+[17:45:46.657 TRACE] starting server
+[17:46:01.134 FATAL] [exit] shutting down...
+[17:46:01.135 INFO ] connection to database is interrupted
+[18:15:15.097 INFO ] no port passed by argument, hosted on 5432
+[18:15:15.391 ERROR] cannot create worker database
+[18:27:51.296 INFO ] no port passed by argument, hosted on 5432
+[18:27:51.589 ERROR] cannot create bands database
+[18:39:59.157 INFO ] no port passed by argument, hosted on 5432
+[18:39:59.497 ERROR] nothing to load
+[18:39:59.515 TRACE] starting server
+[18:40:09.181 ERROR] [ass] [login] login or password is incorrect
+[18:40:38.971 ERROR] [add] no such user, or user login or password is incorrect
+[18:40:54.255 INFO ] [ass] [register] user ass successfully registered
+[18:41:21.069 ERROR] [ass] [add] cannot add to database
+[19:07:31.143 INFO ] no port passed by argument, hosted on 5432
+[19:07:31.474 ERROR] nothing to load
+[19:07:31.498 TRACE] starting server
+[19:07:52.137 ERROR] [ass] [register] user ass already exist
+[19:07:58.529 INFO ] [ass] [login] login successful
+[19:08:35.480 INFO ] [ass] [add] 
+Added element: {
+  "id" : 1,
+  "name" : "first",
+  "coordinates" : {"x" : 1.0, "y" : 2},
+  "creationDate" : "2022-06-18",
+  "followers" : 213,
+  "BirthBandDate" : "2003-11-11",
+  "genre" : "JAZZ",
+  "status" : "REGULAR",
+  "bestAlbum" : {"fullName" : "FS", "type" : "PUBLIC"}
+  "userLogin" : ass
+}
+[19:10:08.811 TRACE] received request from /127.0.0.1:61832
+[19:10:08.820 ERROR] [andrew2003] [login] login or password is incorrect
+[19:10:08.823 TRACE] sent response to /127.0.0.1:61832
+[19:10:33.718 TRACE] received request from /127.0.0.1:61832
+[19:10:33.720 INFO ] [andrew2003] [register] user andrew2003 successfully registered
+[19:10:33.721 TRACE] sent response to /127.0.0.1:61832
+[19:10:38.579 TRACE] received request from /127.0.0.1:61832
+[19:10:38.627 INFO ] [andrew2003] [show] 
+[
+  {
+    "coordinates": {
+      "x": 1.0,
+      "y": 2
+    },
+    "genre": "JAZZ",
+    "bestAlbum": {
+      "fullName": "FS",
+      "type": "PUBLIC"
+    },
+    "id": 1,
+    "name": "first",
+    "creationDate": "2022-06-18",
+    "followers": 213,
+    "BirthBandDate": "2003-11-11",
+    "status": "REGULAR",
+    "userLogin": "ass"
+  }
+]
+[19:10:38.628 TRACE] sent response to /127.0.0.1:61832
+[19:11:41.390 TRACE] received request from /127.0.0.1:61832
+[19:11:41.399 INFO ] [andrew2003] [add] 
+Added element: {
+  "id" : 2,
+  "name" : "qwqweqe",
+  "coordinates" : {"x" : 123.0, "y" : 321},
+  "creationDate" : "2022-06-18",
+  "followers" : 3333,
+  "BirthBandDate" : "2003-11-23",
+  "genre" : "RAP",
+  "status" : "REGULAR",
+  "bestAlbum" : {"type" : "PUBLIC"}
+  "userLogin" : andrew2003
+}
+[19:11:41.400 TRACE] sent response to /127.0.0.1:61832
+[19:12:05.453 TRACE] received request from /127.0.0.1:61832
+[19:12:05.456 INFO ] [andrew2003] [info] Database of MusicBand, size: 2, initialization date: 2022-06-18T19:07:31.447892
+[19:12:05.457 TRACE] sent response to /127.0.0.1:61832
+[19:16:20.171 INFO ] no port passed by argument, hosted on 5432
+[19:16:20.514 INFO ] collection successfully loaded
+[19:16:20.538 TRACE] starting server
+[19:16:24.690 ERROR] [help] no such user, or user login or password is incorrect
+[19:16:37.901 INFO ] [ass] [login] login successful
+[19:18:06.152 ERROR] [hel] wrong command
+[19:18:09.332 INFO ] [ass] [help] 
+
+help : show help for available commands
+
+info : Write to standard output information about the collection (type,
+initialization date, number of elements, etc.)
+
+show : print to standard output all elements of the collection in
+string representation
+
+add {element} : add a new element to the collection
+
+update id {element} : update the value of the collection element whose id
+equal to given
+
+remove_by_id id : remove an element from the collection by its id
+
+clear : clear the collection
+
+execute_script file_name : read and execute script from specified file.
+The script contains commands in the same form in which they are entered
+user is interactive.
+
+exit : exit the program
+
+remove_first : remove the first element from the collection
+
+add_if_max {element} : add a new element to the collection if its
+value is greater than the value of the largest element of this collection
+
+add_if_min {element} : add a new element to the collection if it
+the value is less than the smallest element of this collection
+
+group_counting_by_end_date : group the elements of the collection by
+the value of the endDate field, display the number of elements in each group
+
+filter_starts_with_name name : output elements, value of field name
+which starts with the given substring
+
+print_unique_followers : print the unique values of the followers field of all
+items in the collection
+
+register {user} : register a new user
+
+login {user} : login user
+
+show_users : show all registered users
+
+[19:19:07.783 INFO ] [ass] [add] 
+Added element: {
+  "id" : 3,
+  "name" : "300",
+  "coordinates" : {"x" : 1.0, "y" : 2},
+  "creationDate" : "2022-06-18",
+  "followers" : 1,
+  "BirthBandDate" : "2003-04-20",
+  "genre" : "POP",
+  "status" : "REGULAR",
+  "bestAlbum" : {"fullName" : "3", "type" : "PUBLIC"}
+  "userLogin" : ass
+}
+[22:00:37.572 INFO ] no port passed by argument, hosted on 5432
+[22:00:37.924 ERROR] nothing to load
+[22:00:37.936 TRACE] starting server
+[22:00:48.918 INFO ] [ass] [login] login successful
+[22:07:57.948 INFO ] [ass] [add] 
+Added element: {
+  "id" : 4,
+  "name" : "super",
+  "coordinates" : {"x" : 123.0, "y" : 4},
+  "creationDate" : "2022-06-18",
+  "followers" : 98987665,
+  "BirthBandDate" : "2003-11-22",
+  "genre" : "ROCK",
+  "status" : "REGULAR",
+  "bestAlbum" : {"fullName" : "GG", "type" : "SOLO"}
+  "userLogin" : ass
+}
+[22:11:15.816 INFO ] no port passed by argument, hosted on 5432
+[22:11:16.155 WARN ] 3 elements are damaged
+[22:11:16.176 TRACE] starting server
+[22:11:35.398 INFO ] [ass] [login] login successful
+[22:12:28.208 ERROR] [штащ] wrong command
+[22:12:31.110 ERROR] Can't get user from database.
+[22:12:31.110 ERROR] [ass] [info] no such user, or user login or password is incorrect
+[22:12:45.679 ERROR] [ass] [login] cannot get SQL statement
+[22:13:07.747 ERROR] [dude] [register] cannot get SQL statement
+[22:13:32.298 TRACE] received request from /127.0.0.1:50442
+[22:13:32.306 ERROR] [ass] [login] cannot get SQL statement
+[22:13:32.310 TRACE] sent response to /127.0.0.1:50442
+[22:14:11.680 INFO ] no port passed by argument, hosted on 5432
+[22:14:11.717 ERROR] error during connection to database
+[22:15:47.561 INFO ] no port passed by argument, hosted on 5432
+[22:15:47.612 ERROR] error during connection to database
+[14:14:02.560 INFO ] no port passed by argument, hosted on 5432
+[14:14:02.648 ERROR] error during connection to database
+[14:31:01.543 INFO ] no port passed by argument, hosted on 5432
+[14:31:01.583 ERROR] error during connection to database
+[14:32:00.259 INFO ] no port passed by argument, hosted on 5432
+[14:32:00.300 ERROR] error during connection to database
+[14:36:29.671 INFO ] no port passed by argument, hosted on 5432
+[14:36:29.709 ERROR] error during connection to database
+[14:54:20.332 INFO ] no port passed by argument, hosted on 5432
+[14:54:20.679 WARN ] 3 elements are damaged
+[14:54:20.704 TRACE] starting server
+[14:54:44.183 ERROR] [ass] [register] user ass already exist
+[14:54:50.727 INFO ] [ass] [login] login successful
+[14:54:53.905 INFO ] [ass] [show] 
+[
+  {
+    "coordinates": {
+      "x": 123.0,
+      "y": 4
+    },
+    "genre": "ROCK",
+    "bestAlbum": {
+      "fullName": "GG",
+      "type": "SOLO"
+    },
+    "id": 4,
+    "name": "super",
+    "creationDate": "2022-06-18",
+    "followers": 98987665,
+    "BirthBandDate": "2003-11-22",
+    "status": "REGULAR",
+    "userLogin": "ass"
+  }
+]
+[14:55:14.163 TRACE] received request from /127.0.0.1:60407
+[14:55:14.173 INFO ] [ass] [login] login successful
+[14:55:14.176 TRACE] sent response to /127.0.0.1:60407
+[14:55:23.913 TRACE] received request from /127.0.0.1:60407
+[14:55:23.914 ERROR] this command is only for server
+[14:55:23.915 TRACE] sent response to /127.0.0.1:60407
+[14:56:18.336 TRACE] received request from /127.0.0.1:60407
+[14:56:18.359 INFO ] [ass] [add] 
+Added element: {
+  "id" : 5,
+  "name" : "EEEE",
+  "coordinates" : {"x" : 22.0, "y" : 11},
+  "creationDate" : "2022-06-19",
+  "followers" : 456343243,
+  "BirthBandDate" : "2003-11-11",
+  "genre" : "JAZZ",
+  "status" : "REGULAR",
+  "bestAlbum" : {"fullName" : "YEEE", "type" : "SOLO"}
+  "userLogin" : ass
+}
+[14:56:18.360 TRACE] sent response to /127.0.0.1:60407
+[14:57:25.862 TRACE] received request from /127.0.0.1:60407
+[14:57:25.866 INFO ] [ass] [show] 
+[
+  {
+    "coordinates": {
+      "x": 22.0,
+      "y": 11
+    },
+    "genre": "JAZZ",
+    "bestAlbum": {
+      "fullName": "YEEE",
+      "type": "SOLO"
+    },
+    "id": 5,
+    "name": "EEEE",
+    "creationDate": "2022-06-19",
+    "followers": 456343243,
+    "BirthBandDate": "2003-11-11",
+    "status": "REGULAR",
+    "userLogin": "ass"
+  },
+  {
+    "coordinates": {
+      "x": 123.0,
+      "y": 4
+    },
+    "genre": "ROCK",
+    "bestAlbum": {
+      "fullName": "GG",
+      "type": "SOLO"
+    },
+    "id": 4,
+    "name": "super",
+    "creationDate": "2022-06-18",
+    "followers": 98987665,
+    "BirthBandDate": "2003-11-22",
+    "status": "REGULAR",
+    "userLogin": "ass"
+  }
+]
+[14:57:25.867 TRACE] sent response to /127.0.0.1:60407
+[14:58:09.796 TRACE] received request from /127.0.0.1:60407
+[14:58:09.796 ERROR] wrong command
+[14:58:09.798 TRACE] sent response to /127.0.0.1:60407
+[14:58:32.885 TRACE] received request from /127.0.0.1:60407
+[14:58:32.888 INFO ] [alex] [register] user alex successfully registered
+[14:58:32.889 TRACE] sent response to /127.0.0.1:60407
+[14:58:45.577 TRACE] received request from /127.0.0.1:60407
+[14:58:45.580 INFO ] [postav] [register] user postav successfully registered
+[14:58:45.581 TRACE] sent response to /127.0.0.1:60407
+[14:58:56.421 TRACE] received request from /127.0.0.1:60407
+[14:58:56.423 INFO ] [zachet] [register] user zachet successfully registered
+[14:58:56.424 TRACE] sent response to /127.0.0.1:60407
+[14:59:06.396 INFO ] [ass] [show_users] 
+
+ass
+andrew2003
+alex
+postav
+zachet
+
+[15:00:07.683 TRACE] received request from /127.0.0.1:60407
+[15:00:07.685 ERROR] wrong command
+[15:00:07.686 TRACE] sent response to /127.0.0.1:60407
+[15:00:17.386 TRACE] received request from /127.0.0.1:60407
+[15:00:17.387 ERROR] wrong command
+[15:00:17.388 TRACE] sent response to /127.0.0.1:60407
+[15:00:38.831 TRACE] received request from /127.0.0.1:60407
+[15:00:38.833 ERROR] [zachet] [remove_by_id] no such id #1
+[15:00:38.834 TRACE] sent response to /127.0.0.1:60407
+[15:00:46.286 TRACE] received request from /127.0.0.1:60407
+[15:00:46.287 ERROR] [zachet] [remove_by_id] no such id #2
+[15:00:46.287 TRACE] sent response to /127.0.0.1:60407
+[15:01:06.306 TRACE] received request from /127.0.0.1:60407
+[15:01:06.309 INFO ] [zachet] [show] 
+[
+  {
+    "coordinates": {
+      "x": 22.0,
+      "y": 11
+    },
+    "genre": "JAZZ",
+    "bestAlbum": {
+      "fullName": "YEEE",
+      "type": "SOLO"
+    },
+    "id": 5,
+    "name": "EEEE",
+    "creationDate": "2022-06-19",
+    "followers": 456343243,
+    "BirthBandDate": "2003-11-11",
+    "status": "REGULAR",
+    "userLogin": "ass"
+  },
+  {
+    "coordinates": {
+      "x": 123.0,
+      "y": 4
+    },
+    "genre": "ROCK",
+    "bestAlbum": {
+      "fullName": "GG",
+      "type": "SOLO"
+    },
+    "id": 4,
+    "name": "super",
+    "creationDate": "2022-06-18",
+    "followers": 98987665,
+    "BirthBandDate": "2003-11-22",
+    "status": "REGULAR",
+    "userLogin": "ass"
+  }
+]
+[15:01:06.310 TRACE] sent response to /127.0.0.1:60407
+[15:01:18.102 TRACE] received request from /127.0.0.1:60407
+[15:01:18.105 ERROR] [zachet] [remove_by_id] you dont have permission, element was created by ass
+[15:01:18.105 TRACE] sent response to /127.0.0.1:60407
+[15:01:59.738 TRACE] received request from /127.0.0.1:60407
+[15:01:59.739 ERROR] [zachet] [remove_by_id] you dont have permission, element was created by ass
+[15:01:59.740 TRACE] sent response to /127.0.0.1:60407
+[15:02:14.590 INFO ] [ass] [show] 
+[
+  {
+    "coordinates": {
+      "x": 22.0,
+      "y": 11
+    },
+    "genre": "JAZZ",
+    "bestAlbum": {
+      "fullName": "YEEE",
+      "type": "SOLO"
+    },
+    "id": 5,
+    "name": "EEEE",
+    "creationDate": "2022-06-19",
+    "followers": 456343243,
+    "BirthBandDate": "2003-11-11",
+    "status": "REGULAR",
+    "userLogin": "ass"
+  },
+  {
+    "coordinates": {
+      "x": 123.0,
+      "y": 4
+    },
+    "genre": "ROCK",
+    "bestAlbum": {
+      "fullName": "GG",
+      "type": "SOLO"
+    },
+    "id": 4,
+    "name": "super",
+    "creationDate": "2022-06-18",
+    "followers": 98987665,
+    "BirthBandDate": "2003-11-22",
+    "status": "REGULAR",
+    "userLogin": "ass"
+  }
+]
+[15:02:25.970 INFO ] [ass] [remove_by_id] element #4 removed
+[15:02:38.472 TRACE] received request from /127.0.0.1:60407
+[15:02:38.474 ERROR] [zachet] [remove_first] you dont have permission, element was created by ass
+[15:02:38.475 TRACE] sent response to /127.0.0.1:60407
+[15:03:50.478 TRACE] received request from /127.0.0.1:60407
+[15:03:50.480 INFO ] [ass] [login] login successful
+[15:03:50.481 TRACE] sent response to /127.0.0.1:60407
+[15:03:55.265 TRACE] received request from /127.0.0.1:60407
+[15:03:55.267 INFO ] [ass] [show] 
+[
+  {
+    "coordinates": {
+      "x": 22.0,
+      "y": 11
+    },
+    "genre": "JAZZ",
+    "bestAlbum": {
+      "fullName": "YEEE",
+      "type": "SOLO"
+    },
+    "id": 5,
+    "name": "EEEE",
+    "creationDate": "2022-06-19",
+    "followers": 456343243,
+    "BirthBandDate": "2003-11-11",
+    "status": "REGULAR",
+    "userLogin": "ass"
+  }
+]
+[15:03:55.268 TRACE] sent response to /127.0.0.1:60407
+[15:04:12.639 TRACE] received request from /127.0.0.1:60407
+[15:04:12.640 INFO ] [andrew2003] [login] login successful
+[15:04:12.641 TRACE] sent response to /127.0.0.1:60407
+[15:05:23.290 TRACE] received request from /127.0.0.1:60407
+[15:05:23.295 INFO ] [andrew2003] [add] 
+Added element: {
+  "id" : 6,
+  "name" : "SLAT",
+  "coordinates" : {"x" : 1.0, "y" : 2},
+  "creationDate" : "2022-06-19",
+  "followers" : 133769,
+  "BirthBandDate" : "1969-12-12",
+  "genre" : "RAP",
+  "status" : "RECOMMENDED",
+  "bestAlbum" : {"fullName" : "HER ASS SO GOOD", "type" : "SOLO"}
+  "userLogin" : andrew2003
+}
+[15:05:23.295 TRACE] sent response to /127.0.0.1:60407
+[15:06:21.899 TRACE] received request from /127.0.0.1:60407
+[15:06:21.902 INFO ] [andrew2003] [add] 
+Added element: {
+  "id" : 7,
+  "name" : "BABY",
+  "coordinates" : {"x" : 1.0, "y" : 2},
+  "creationDate" : "2022-06-19",
+  "followers" : 76543,
+  "BirthBandDate" : "2010-03-12",
+  "genre" : "POP",
+  "status" : "REGULAR",
+  "bestAlbum" : {"fullName" : "want soska", "type" : "SOLO"}
+  "userLogin" : andrew2003
+}
+[15:06:21.902 TRACE] sent response to /127.0.0.1:60407
+[15:07:13.153 TRACE] received request from /127.0.0.1:60407
+[15:07:13.155 ERROR] [andrew2003] [update] missed command argument
+[15:07:13.156 TRACE] sent response to /127.0.0.1:60407
+[15:07:27.250 TRACE] received request from /127.0.0.1:60407
+[15:07:27.252 INFO ] [andrew2003] [show] 
+[
+  {
+    "coordinates": {
+      "x": 1.0,
+      "y": 2
+    },
+    "genre": "RAP",
+    "bestAlbum": {
+      "fullName": "HER ASS SO GOOD",
+      "type": "SOLO"
+    },
+    "id": 6,
+    "name": "SLAT",
+    "creationDate": "2022-06-19",
+    "followers": 133769,
+    "BirthBandDate": "1969-12-12",
+    "status": "RECOMMENDED",
+    "userLogin": "andrew2003"
+  },
+  {
+    "coordinates": {
+      "x": 1.0,
+      "y": 2
+    },
+    "genre": "POP",
+    "bestAlbum": {
+      "fullName": "want soska",
+      "type": "SOLO"
+    },
+    "id": 7,
+    "name": "BABY",
+    "creationDate": "2022-06-19",
+    "followers": 76543,
+    "BirthBandDate": "2010-03-12",
+    "status": "REGULAR",
+    "userLogin": "andrew2003"
+  },
+  {
+    "coordinates": {
+      "x": 22.0,
+      "y": 11
+    },
+    "genre": "JAZZ",
+    "bestAlbum": {
+      "fullName": "YEEE",
+      "type": "SOLO"
+    },
+    "id": 5,
+    "name": "EEEE",
+    "creationDate": "2022-06-19",
+    "followers": 456343243,
+    "BirthBandDate": "2003-11-11",
+    "status": "REGULAR",
+    "userLogin": "ass"
+  }
+]
+[15:07:27.253 TRACE] sent response to /127.0.0.1:60407
+[15:08:16.652 TRACE] received request from /127.0.0.1:60407
+[15:08:16.656 INFO ] [andrew2003] [update] element #7 updated
+[15:08:16.656 TRACE] sent response to /127.0.0.1:60407
+[15:09:01.631 TRACE] received request from /127.0.0.1:60407
+[15:09:01.635 INFO ] [andrew2003] [info] Database of MusicBand, size: 3, initialization date: 2022-06-19T14:54:20.631308600
+[15:09:01.635 TRACE] sent response to /127.0.0.1:60407
+[15:09:27.554 TRACE] received request from /127.0.0.1:60407
+[15:09:27.559 INFO ] [andrew2003] [print_unique_followers] 
+133769
+456343243
+4233242
+
+[15:09:27.559 TRACE] sent response to /127.0.0.1:60407
+[15:10:00.763 TRACE] received request from /127.0.0.1:60407
+[15:10:00.766 INFO ] [andrew2003] [filter_starts_with_name] 
+{
+  "id" : 7,
+  "name" : "BAB",
+  "coordinates" : {"x" : 21.0, "y" : 321},
+  "creationDate" : "2022-06-19",
+  "followers" : 4233242,
+  "BirthBandDate" : "2000-11-11",
+  "genre" : "JAZZ",
+  "status" : "REGULAR",
+  "bestAlbum" : {"fullName" : "ROLA", "type" : "SOLO"}
+  "userLogin" : andrew2003
+}
+
+[15:10:00.766 TRACE] sent response to /127.0.0.1:60407
+[15:10:17.262 TRACE] received request from /127.0.0.1:60407
+[15:10:17.264 INFO ] [andrew2003] [filter_starts_with_name] 
+{
+  "id" : 7,
+  "name" : "BAB",
+  "coordinates" : {"x" : 21.0, "y" : 321},
+  "creationDate" : "2022-06-19",
+  "followers" : 4233242,
+  "BirthBandDate" : "2000-11-11",
+  "genre" : "JAZZ",
+  "status" : "REGULAR",
+  "bestAlbum" : {"fullName" : "ROLA", "type" : "SOLO"}
+  "userLogin" : andrew2003
+}
+
+[15:10:17.264 TRACE] sent response to /127.0.0.1:60407
+[15:10:42.647 TRACE] received request from /127.0.0.1:60407
+[15:10:42.651 INFO ] [andrew2003] [group_counting_by_end_date] 
+1969-12-12 : 1
+2003-11-11 : 1
+2000-11-11 : 1
+
+[15:10:42.652 TRACE] sent response to /127.0.0.1:60407
+[15:14:05.772 TRACE] received request from /127.0.0.1:60407
+[15:14:05.775 INFO ] [andrew2003] [show] 
+[
+  {
+    "coordinates": {
+      "x": 1.0,
+      "y": 2
+    },
+    "genre": "RAP",
+    "bestAlbum": {
+      "fullName": "HER ASS SO GOOD",
+      "type": "SOLO"
+    },
+    "id": 6,
+    "name": "SLAT",
+    "creationDate": "2022-06-19",
+    "followers": 133769,
+    "BirthBandDate": "1969-12-12",
+    "status": "RECOMMENDED",
+    "userLogin": "andrew2003"
+  },
+  {
+    "coordinates": {
+      "x": 21.0,
+      "y": 321
+    },
+    "genre": "JAZZ",
+    "bestAlbum": {
+      "fullName": "ROLA",
+      "type": "SOLO"
+    },
+    "id": 7,
+    "name": "BAB",
+    "creationDate": "2022-06-19",
+    "followers": 4233242,
+    "BirthBandDate": "2000-11-11",
+    "status": "REGULAR",
+    "userLogin": "andrew2003"
+  },
+  {
+    "coordinates": {
+      "x": 22.0,
+      "y": 11
+    },
+    "genre": "JAZZ",
+    "bestAlbum": {
+      "fullName": "YEEE",
+      "type": "SOLO"
+    },
+    "id": 5,
+    "name": "EEEE",
+    "creationDate": "2022-06-19",
+    "followers": 456343243,
+    "BirthBandDate": "2003-11-11",
+    "status": "REGULAR",
+    "userLogin": "ass"
+  }
+]
+[15:14:05.775 TRACE] sent response to /127.0.0.1:60407
+[15:14:45.201 INFO ] [ass] [help] 
+
+help : show help for available commands
+
+info : Write to standard output information about the collection (type,
+initialization date, number of elements, etc.)
+
+show : print to standard output all elements of the collection in
+string representation
+
+add {element} : add a new element to the collection
+
+update id {element} : update the value of the collection element whose id
+equal to given
+
+remove_by_id id : remove an element from the collection by its id
+
+clear : clear the collection
+
+execute_script file_name : read and execute script from specified file.
+The script contains commands in the same form in which they are entered
+user is interactive.
+
+exit : exit the program
+
+remove_first : remove the first element from the collection
+
+add_if_max {element} : add a new element to the collection if its
+value is greater than the value of the largest element of this collection
+
+add_if_min {element} : add a new element to the collection if it
+the value is less than the smallest element of this collection
+
+group_counting_by_end_date : group the elements of the collection by
+the value of the endDate field, display the number of elements in each group
+
+filter_starts_with_name name : output elements, value of field name
+which starts with the given substring
+
+print_unique_followers : print the unique values of the followers field of all
+items in the collection
+
+register {user} : register a new user
+
+login {user} : login user
+
+show_users : show all registered users
+
+[15:14:57.985 TRACE] received request from /127.0.0.1:57602
+[15:14:57.985 ERROR] wrong command
+[15:14:57.985 TRACE] received request from /127.0.0.1:57603
+[15:14:57.986 ERROR] wrong command
+[15:14:57.986 TRACE] received request from /127.0.0.1:57604
+[15:14:57.986 TRACE] sent response to /127.0.0.1:57602
+[15:14:57.986 TRACE] sent response to /127.0.0.1:57603
+[15:14:57.986 TRACE] received request from /127.0.0.1:57605
+[15:14:57.986 ERROR] wrong command
+[15:14:57.986 TRACE] received request from /127.0.0.1:57606
+[15:14:57.987 ERROR] wrong command
+[15:14:57.987 TRACE] sent response to /127.0.0.1:57604
+[15:14:57.987 ERROR] wrong command
+[15:14:57.987 TRACE] sent response to /127.0.0.1:57606
+[15:14:57.988 TRACE] sent response to /127.0.0.1:57605
+[15:15:05.867 TRACE] received request from /127.0.0.1:57607
+[15:15:05.868 INFO ] [ass] [login] login successful
+[15:15:05.868 TRACE] sent response to /127.0.0.1:57607
+[15:36:11.229 INFO ] no port passed by argument, hosted on 5432
+[15:36:11.603 WARN ] 3 elements are damaged
+[15:36:11.618 TRACE] starting server
+[15:37:47.900 ERROR] [дщпшт] wrong command
+[15:37:53.592 INFO ] [ass] [login] login successful
+[15:37:56.382 INFO ] [ass] [clear] collection cleared
+[15:38:00.219 INFO ] [ass] [show] 
+[
+  {
+    "coordinates": {
+      "x": 1.0,
+      "y": 2
+    },
+    "genre": "RAP",
+    "bestAlbum": {
+      "fullName": "HER ASS SO GOOD",
+      "type": "SOLO"
+    },
+    "id": 6,
+    "name": "SLAT",
+    "creationDate": "2022-06-19",
+    "followers": 133769,
+    "BirthBandDate": "1969-12-12",
+    "status": "RECOMMENDED",
+    "userLogin": "andrew2003"
+  },
+  {
+    "coordinates": {
+      "x": 21.0,
+      "y": 321
+    },
+    "genre": "JAZZ",
+    "bestAlbum": {
+      "fullName": "ROLA",
+      "type": "SOLO"
+    },
+    "id": 7,
+    "name": "BAB",
+    "creationDate": "2022-06-19",
+    "followers": 4233242,
+    "BirthBandDate": "2000-11-11",
+    "status": "REGULAR",
+    "userLogin": "andrew2003"
+  }
+]
+[15:38:33.412 INFO ] [andrew2003] [login] login successful
+[15:38:37.701 INFO ] [andrew2003] [clear] collection cleared
+[15:38:50.161 TRACE] received request from /127.0.0.1:59470
+[15:38:50.160 TRACE] received request from /127.0.0.1:59469
+[15:38:50.163 TRACE] received request from /127.0.0.1:59471
+[15:38:50.164 TRACE] received request from /127.0.0.1:59472
+[15:38:50.161 TRACE] received request from /127.0.0.1:59468
+[15:38:50.174 ERROR] wrong command
+[15:38:50.174 ERROR] wrong command
+[15:38:50.176 ERROR] wrong command
+[15:38:50.177 ERROR] wrong command
+[15:38:50.179 ERROR] wrong command
+[15:38:50.182 TRACE] sent response to /127.0.0.1:59471
+[15:38:50.182 TRACE] sent response to /127.0.0.1:59470
+[15:38:50.182 TRACE] sent response to /127.0.0.1:59469
+[15:38:50.183 TRACE] sent response to /127.0.0.1:59468
+[15:38:50.183 TRACE] sent response to /127.0.0.1:59472
+[15:39:28.716 INFO ] [andrew2003] [add] 
+Added element: {
+  "id" : 8,
+  "name" : "add",
+  "coordinates" : {"x" : 1.0, "y" : 2},
+  "creationDate" : "2022-06-19",
+  "followers" : 3,
+  "BirthBandDate" : "2000-11-11",
+  "genre" : "POP",
+  "status" : "REGULAR",
+  "bestAlbum" : {"fullName" : "FALLEN", "type" : "SOLO"}
+  "userLogin" : andrew2003
+}
+[15:40:16.658 TRACE] received request from /127.0.0.1:49162
+[15:40:16.660 INFO ] [ass] [login] login successful
+[15:40:16.661 TRACE] sent response to /127.0.0.1:49162
+[15:41:13.380 TRACE] received request from /127.0.0.1:49162
+[15:41:13.387 INFO ] [ass] [add] 
+Added element: {
+  "id" : 9,
+  "name" : "shit",
+  "coordinates" : {"x" : 1.0, "y" : 2},
+  "creationDate" : "2022-06-19",
+  "followers" : 3213,
+  "BirthBandDate" : "2003-11-01",
+  "genre" : "JAZZ",
+  "status" : "RECOMMENDED",
+  "bestAlbum" : {"fullName" : "Trash", "type" : "SOLO"}
+  "userLogin" : ass
+}
+[15:41:13.388 TRACE] sent response to /127.0.0.1:49162
+[15:41:49.140 TRACE] received request from /127.0.0.1:59473
+[15:41:49.141 INFO ] [alex] [login] login successful
+[15:41:49.142 TRACE] sent response to /127.0.0.1:59473
+[15:42:54.234 TRACE] received request from /127.0.0.1:59473
+[15:42:54.238 INFO ] [alex] [add] 
+Added element: {
+  "id" : 10,
+  "name" : "zachet po proge",
+  "coordinates" : {"x" : 5.0, "y" : 5},
+  "creationDate" : "2022-06-19",
+  "followers" : 5,
+  "BirthBandDate" : "2022-06-19",
+  "genre" : "RAP",
+  "status" : "REGULAR",
+  "bestAlbum" : {"fullName" : "net dopse", "type" : "SOLO"}
+  "userLogin" : alex
+}
+[15:42:54.238 TRACE] sent response to /127.0.0.1:59473
+[15:50:19.291 INFO ] [andrew2003] [help] 
+
+help : show help for available commands
+
+info : Write to standard output information about the collection (type,
+initialization date, number of elements, etc.)
+
+show : print to standard output all elements of the collection in
+string representation
+
+add {element} : add a new element to the collection
+
+update id {element} : update the value of the collection element whose id
+equal to given
+
+remove_by_id id : remove an element from the collection by its id
+
+clear : clear the collection
+
+execute_script file_name : read and execute script from specified file.
+The script contains commands in the same form in which they are entered
+user is interactive.
+
+exit : exit the program
+
+remove_first : remove the first element from the collection
+
+add_if_max {element} : add a new element to the collection if its
+value is greater than the value of the largest element of this collection
+
+add_if_min {element} : add a new element to the collection if it
+the value is less than the smallest element of this collection
+
+group_counting_by_end_date : group the elements of the collection by
+the value of the endDate field, display the number of elements in each group
+
+filter_starts_with_name name : output elements, value of field name
+which starts with the given substring
+
+print_unique_followers : print the unique values of the followers field of all
+items in the collection
+
+register {user} : register a new user
+
+login {user} : login user
+
+show_users : show all registered users
+
+[15:52:51.566 ERROR] [execute_script] cannot find file
+[15:53:07.205 INFO ] [execute_script] script successfully executed
+[15:58:54.163 INFO ] no port passed by argument, hosted on 5432
+[15:58:54.491 INFO ] collection successfully loaded
+[15:58:54.514 TRACE] starting server
+[15:59:05.261 INFO ] [ass] [login] login successful
+[16:07:59.985 INFO ] no port passed by argument, hosted on 5432
+[16:08:00.336 INFO ] collection successfully loaded
+[16:08:00.361 TRACE] starting server
+[16:08:08.717 INFO ] [ass] [login] login successful
+[16:09:06.240 INFO ] [ass] [add] 
+Added element: {
+  "id" : 11,
+  "name" : "big",
+  "coordinates" : {"x" : 1.0, "y" : 1},
+  "creationDate" : "2022-06-19",
+  "followers" : 3123123,
+  "BirthBandDate" : "2020-02-20",
+  "genre" : "POP",
+  "status" : "REGULAR",
+  "bestAlbum" : {"fullName" : "fruits", "type" : "COLLABORATION"}
+  "userLogin" : ass
+}
+[16:11:51.781 INFO ] no port passed by argument, hosted on 5432
+[16:11:52.137 INFO ] collection successfully loaded
+[16:11:52.153 TRACE] starting server
+[16:11:56.765 INFO ] [ass] [login] login successful
+[16:13:07.769 INFO ] no port passed by argument, hosted on 5432
+[16:13:08.146 INFO ] collection successfully loaded
+[16:13:08.161 TRACE] starting server
+[16:13:13.779 INFO ] [ass] [login] login successful
+[16:13:46.307 INFO ] [ass] [add] 
+Added element: {
+  "id" : 12,
+  "name" : "upp",
+  "coordinates" : {"x" : 12.0, "y" : 34},
+  "creationDate" : "2022-06-19",
+  "followers" : 56,
+  "BirthBandDate" : "2001-10-10",
+  "genre" : "POP",
+  "status" : "REGULAR",
+  "bestAlbum" : {"fullName" : "fruits", "type" : "SOLO"}
+  "userLogin" : ass
+}
+[16:18:20.863 INFO ] [ass] [help] 
+
+help : show help for available commands
+
+info : Write to standard output information about the collection (type,
+initialization date, number of elements, etc.)
+
+show : print to standard output all elements of the collection in
+string representation
+
+add {element} : add a new element to the collection
+
+update id {element} : update the value of the collection element whose id
+equal to given
+
+remove_by_id id : remove an element from the collection by its id
+
+clear : clear the collection
+
+execute_script file_name : read and execute script from specified file.
+The script contains commands in the same form in which they are entered
+user is interactive.
+
+exit : exit the program
+
+remove_first : remove the first element from the collection
+
+add_if_max {element} : add a new element to the collection if its
+value is greater than the value of the largest element of this collection
+
+add_if_min {element} : add a new element to the collection if it
+the value is less than the smallest element of this collection
+
+group_counting_by_end_date : group the elements of the collection by
+the value of the endDate field, display the number of elements in each group
+
+filter_starts_with_name name : output elements, value of field name
+which starts with the given substring
+
+print_unique_followers : print the unique values of the followers field of all
+items in the collection
+
+register {user} : register a new user
+
+login {user} : login user
+
+show_users : show all registered users
+
+[16:18:30.913 INFO ] [ass] [print_unique_followers] 
+3
+3213
+5
+3123123
+56
+
+[16:18:50.627 INFO ] [ass] [group_counting_by_end_date] 
+2001-10-10 : 1
+2000-11-11 : 1
+2020-02-20 : 1
+2022-06-19 : 1
+2003-11-01 : 1
+
+[16:20:02.160 INFO ] no port passed by argument, hosted on 5432
+[16:20:02.645 INFO ] collection successfully loaded
+[16:20:02.678 TRACE] starting server
+[16:20:09.038 INFO ] [ass] [login] login successful
+[16:20:11.443 INFO ] [ass] [help] 
+
+help : show help for available commands
+
+info : Write to standard output information about the collection (type,
+initialization date, number of elements, etc.)
+
+show : print to standard output all elements of the collection in
+string representation
+
+add {element} : add a new element to the collection
+
+update id {element} : update the value of the collection element whose id
+equal to given
+
+remove_by_id id : remove an element from the collection by its id
+
+clear : clear the collection
+
+execute_script file_name : read and execute script from specified file.
+The script contains commands in the same form in which they are entered
+user is interactive.
+
+exit : exit the program
+
+remove_first : remove the first element from the collection
+
+add_if_max {element} : add a new element to the collection if its
+value is greater than the value of the largest element of this collection
+
+add_if_min {element} : add a new element to the collection if it
+the value is less than the smallest element of this collection
+
+group_counting_by_end_date : group the elements of the collection by
+the value of the endDate field, display the number of elements in each group
+
+filter_starts_with_name name : output elements, value of field name
+which starts with the given substring
+
+print_unique_followers : print the unique values of the followers field of all
+items in the collection
+
+register {user} : register a new user
+
+login {user} : login user
+
+show_users : show all registered users
+
+[16:20:41.116 INFO ] no port passed by argument, hosted on 5432
+[16:20:41.558 INFO ] collection successfully loaded
+[16:20:41.572 TRACE] starting server
+[16:20:50.416 INFO ] [ass] [login] login successful
+[16:21:03.464 INFO ] [ass] [help] 
+
+help : show help for available commands
+
+info : Write to standard output information about the collection (type,
+initialization date, number of elements, etc.)
+
+show : print to standard output all elements of the collection in
+string representation
+
+add {element} : add a new element to the collection
+
+update id {element} : update the value of the collection element whose id
+equal to given
+
+remove_by_id id : remove an element from the collection by its id
+
+clear : clear the collection
+
+execute_script file_name : read and execute script from specified file.
+The script contains commands in the same form in which they are entered
+user is interactive.
+
+exit : exit the program
+
+remove_first : remove the first element from the collection
+
+add_if_max {element} : add a new element to the collection if its
+value is greater than the value of the largest element of this collection
+
+add_if_min {element} : add a new element to the collection if it
+the value is less than the smallest element of this collection
+
+group_counting_by_end_date : group the elements of the collection by
+the value of the endDate field, display the number of elements in each group
+
+filter_bands_with_name name : output elements, value of field name
+which starts with the given substring
+
+print_unique_followers : print the unique values of the followers field of all
+items in the collection
+
+register {user} : register a new user
+
+login {user} : login user
+
+show_users : show all registered users
+
+[16:21:14.994 INFO ] [ass] [filter_bands_with_name] none of elements have name which starts with B
+[16:21:20.975 INFO ] [ass] [filter_bands_with_name] 
+{
+  "id" : 10,
+  "name" : "zachet po proge",
+  "coordinates" : {"x" : 5.0, "y" : 5},
+  "creationDate" : "2022-06-19",
+  "followers" : 5,
+  "BirthBandDate" : "2022-06-19",
+  "genre" : "RAP",
+  "status" : "REGULAR",
+  "bestAlbum" : {"fullName" : "net dopse", "type" : "SOLO"}
+  "userLogin" : alex
+}
+
+[16:21:45.096 INFO ] [ass] [filter_bands_with_name] none of elements have name which starts with f
+[16:21:50.024 INFO ] [ass] [filter_bands_with_name] 
+{
+  "id" : 8,
+  "name" : "add",
+  "coordinates" : {"x" : 1.0, "y" : 2},
+  "creationDate" : "2022-06-19",
+  "followers" : 3,
+  "BirthBandDate" : "2000-11-11",
+  "genre" : "POP",
+  "status" : "REGULAR",
+  "bestAlbum" : {"fullName" : "FALLEN", "type" : "SOLO"}
+  "userLogin" : andrew2003
+}
+
+[17:37:26.100 TRACE] received request from /127.0.0.1:53796
+[17:37:26.100 TRACE] received request from /127.0.0.1:53798
+[17:37:26.100 TRACE] received request from /127.0.0.1:53794
+[17:37:26.100 TRACE] received request from /127.0.0.1:53795
+[17:37:26.100 TRACE] received request from /127.0.0.1:53797
+[17:37:26.123 ERROR] wrong command
+[17:37:26.124 ERROR] wrong command
+[17:37:26.124 ERROR] wrong command
+[17:37:26.125 ERROR] wrong command
+[17:37:26.124 ERROR] wrong command
+[17:37:26.130 TRACE] sent response to /127.0.0.1:53796
+[17:37:26.130 TRACE] sent response to /127.0.0.1:53798
+[17:37:26.130 TRACE] sent response to /127.0.0.1:53794
+[17:37:26.131 TRACE] sent response to /127.0.0.1:53797
+[17:37:26.131 TRACE] sent response to /127.0.0.1:53795
+[17:37:31.500 TRACE] received request from /127.0.0.1:53799
+[17:37:31.507 INFO ] [ass] [login] login successful
+[17:37:31.508 TRACE] sent response to /127.0.0.1:53799
+[17:37:38.569 TRACE] received request from /127.0.0.1:51896
+[17:37:38.570 INFO ] [alex] [login] login successful
+[17:37:38.571 TRACE] sent response to /127.0.0.1:51896
+[17:38:13.148 TRACE] received request from /127.0.0.1:51896
+[17:38:13.165 INFO ] [alex] [add] 
+Added element: {
+  "id" : 13,
+  "name" : "add",
+  "coordinates" : {"x" : 2.0, "y" : 3},
+  "creationDate" : "2022-06-19",
+  "followers" : 4,
+  "BirthBandDate" : "2000-11-11",
+  "genre" : "POP",
+  "status" : "RECOMMENDED",
+  "bestAlbum" : {"fullName" : "asd", "type" : "SOLO"}
+  "userLogin" : alex
+}
+[17:38:13.166 TRACE] sent response to /127.0.0.1:51896
+[17:38:17.813 TRACE] received request from /127.0.0.1:53799
+[17:38:17.865 INFO ] [ass] [show] 
+[
+  {
+    "coordinates": {
+      "x": 1.0,
+      "y": 1
+    },
+    "genre": "POP",
+    "bestAlbum": {
+      "fullName": "fruits",
+      "type": "COLLABORATION"
+    },
+    "id": 11,
+    "name": "big",
+    "creationDate": "2022-06-19",
+    "followers": 3123123,
+    "BirthBandDate": "2020-02-20",
+    "status": "REGULAR",
+    "userLogin": "ass"
+  },
+  {
+    "coordinates": {
+      "x": 1.0,
+      "y": 2
+    },
+    "genre": "POP",
+    "bestAlbum": {
+      "fullName": "FALLEN",
+      "type": "SOLO"
+    },
+    "id": 8,
+    "name": "add",
+    "creationDate": "2022-06-19",
+    "followers": 3,
+    "BirthBandDate": "2000-11-11",
+    "status": "REGULAR",
+    "userLogin": "andrew2003"
+  },
+  {
+    "coordinates": {
+      "x": 1.0,
+      "y": 2
+    },
+    "genre": "JAZZ",
+    "bestAlbum": {
+      "fullName": "Trash",
+      "type": "SOLO"
+    },
+    "id": 9,
+    "name": "shit",
+    "creationDate": "2022-06-19",
+    "followers": 3213,
+    "BirthBandDate": "2003-11-01",
+    "status": "RECOMMENDED",
+    "userLogin": "ass"
+  },
+  {
+    "coordinates": {
+      "x": 2.0,
+      "y": 3
+    },
+    "genre": "POP",
+    "bestAlbum": {
+      "fullName": "asd",
+      "type": "SOLO"
+    },
+    "id": 13,
+    "name": "add",
+    "creationDate": "2022-06-19",
+    "followers": 4,
+    "BirthBandDate": "2000-11-11",
+    "status": "RECOMMENDED",
+    "userLogin": "alex"
+  },
+  {
+    "coordinates": {
+      "x": 5.0,
+      "y": 5
+    },
+    "genre": "RAP",
+    "bestAlbum": {
+      "fullName": "net dopse",
+      "type": "SOLO"
+    },
+    "id": 10,
+    "name": "zachet po proge",
+    "creationDate": "2022-06-19",
+    "followers": 5,
+    "BirthBandDate": "2022-06-19",
+    "status": "REGULAR",
+    "userLogin": "alex"
+  },
+  {
+    "coordinates": {
+      "x": 12.0,
+      "y": 34
+    },
+    "genre": "POP",
+    "bestAlbum": {
+      "fullName": "fruits",
+      "type": "SOLO"
+    },
+    "id": 12,
+    "name": "upp",
+    "creationDate": "2022-06-19",
+    "followers": 56,
+    "BirthBandDate": "2001-10-10",
+    "status": "REGULAR",
+    "userLogin": "ass"
+  }
+]
+[17:38:17.866 TRACE] sent response to /127.0.0.1:53799
+[17:38:29.081 TRACE] received request from /127.0.0.1:53799
+[17:38:29.084 INFO ] [ass] [show] 
+[
+  {
+    "coordinates": {
+      "x": 1.0,
+      "y": 1
+    },
+    "genre": "POP",
+    "bestAlbum": {
+      "fullName": "fruits",
+      "type": "COLLABORATION"
+    },
+    "id": 11,
+    "name": "big",
+    "creationDate": "2022-06-19",
+    "followers": 3123123,
+    "BirthBandDate": "2020-02-20",
+    "status": "REGULAR",
+    "userLogin": "ass"
+  },
+  {
+    "coordinates": {
+      "x": 1.0,
+      "y": 2
+    },
+    "genre": "POP",
+    "bestAlbum": {
+      "fullName": "FALLEN",
+      "type": "SOLO"
+    },
+    "id": 8,
+    "name": "add",
+    "creationDate": "2022-06-19",
+    "followers": 3,
+    "BirthBandDate": "2000-11-11",
+    "status": "REGULAR",
+    "userLogin": "andrew2003"
+  },
+  {
+    "coordinates": {
+      "x": 1.0,
+      "y": 2
+    },
+    "genre": "JAZZ",
+    "bestAlbum": {
+      "fullName": "Trash",
+      "type": "SOLO"
+    },
+    "id": 9,
+    "name": "shit",
+    "creationDate": "2022-06-19",
+    "followers": 3213,
+    "BirthBandDate": "2003-11-01",
+    "status": "RECOMMENDED",
+    "userLogin": "ass"
+  },
+  {
+    "coordinates": {
+      "x": 2.0,
+      "y": 3
+    },
+    "genre": "POP",
+    "bestAlbum": {
+      "fullName": "asd",
+      "type": "SOLO"
+    },
+    "id": 13,
+    "name": "add",
+    "creationDate": "2022-06-19",
+    "followers": 4,
+    "BirthBandDate": "2000-11-11",
+    "status": "RECOMMENDED",
+    "userLogin": "alex"
+  },
+  {
+    "coordinates": {
+      "x": 5.0,
+      "y": 5
+    },
+    "genre": "RAP",
+    "bestAlbum": {
+      "fullName": "net dopse",
+      "type": "SOLO"
+    },
+    "id": 10,
+    "name": "zachet po proge",
+    "creationDate": "2022-06-19",
+    "followers": 5,
+    "BirthBandDate": "2022-06-19",
+    "status": "REGULAR",
+    "userLogin": "alex"
+  },
+  {
+    "coordinates": {
+      "x": 12.0,
+      "y": 34
+    },
+    "genre": "POP",
+    "bestAlbum": {
+      "fullName": "fruits",
+      "type": "SOLO"
+    },
+    "id": 12,
+    "name": "upp",
+    "creationDate": "2022-06-19",
+    "followers": 56,
+    "BirthBandDate": "2001-10-10",
+    "status": "REGULAR",
+    "userLogin": "ass"
+  }
+]
+[17:38:29.085 TRACE] sent response to /127.0.0.1:53799
+[17:38:37.910 TRACE] received request from /127.0.0.1:51896
+[17:38:37.913 INFO ] [alex] [show] 
+[
+  {
+    "coordinates": {
+      "x": 1.0,
+      "y": 1
+    },
+    "genre": "POP",
+    "bestAlbum": {
+      "fullName": "fruits",
+      "type": "COLLABORATION"
+    },
+    "id": 11,
+    "name": "big",
+    "creationDate": "2022-06-19",
+    "followers": 3123123,
+    "BirthBandDate": "2020-02-20",
+    "status": "REGULAR",
+    "userLogin": "ass"
+  },
+  {
+    "coordinates": {
+      "x": 1.0,
+      "y": 2
+    },
+    "genre": "POP",
+    "bestAlbum": {
+      "fullName": "FALLEN",
+      "type": "SOLO"
+    },
+    "id": 8,
+    "name": "add",
+    "creationDate": "2022-06-19",
+    "followers": 3,
+    "BirthBandDate": "2000-11-11",
+    "status": "REGULAR",
+    "userLogin": "andrew2003"
+  },
+  {
+    "coordinates": {
+      "x": 1.0,
+      "y": 2
+    },
+    "genre": "JAZZ",
+    "bestAlbum": {
+      "fullName": "Trash",
+      "type": "SOLO"
+    },
+    "id": 9,
+    "name": "shit",
+    "creationDate": "2022-06-19",
+    "followers": 3213,
+    "BirthBandDate": "2003-11-01",
+    "status": "RECOMMENDED",
+    "userLogin": "ass"
+  },
+  {
+    "coordinates": {
+      "x": 2.0,
+      "y": 3
+    },
+    "genre": "POP",
+    "bestAlbum": {
+      "fullName": "asd",
+      "type": "SOLO"
+    },
+    "id": 13,
+    "name": "add",
+    "creationDate": "2022-06-19",
+    "followers": 4,
+    "BirthBandDate": "2000-11-11",
+    "status": "RECOMMENDED",
+    "userLogin": "alex"
+  },
+  {
+    "coordinates": {
+      "x": 5.0,
+      "y": 5
+    },
+    "genre": "RAP",
+    "bestAlbum": {
+      "fullName": "net dopse",
+      "type": "SOLO"
+    },
+    "id": 10,
+    "name": "zachet po proge",
+    "creationDate": "2022-06-19",
+    "followers": 5,
+    "BirthBandDate": "2022-06-19",
+    "status": "REGULAR",
+    "userLogin": "alex"
+  },
+  {
+    "coordinates": {
+      "x": 12.0,
+      "y": 34
+    },
+    "genre": "POP",
+    "bestAlbum": {
+      "fullName": "fruits",
+      "type": "SOLO"
+    },
+    "id": 12,
+    "name": "upp",
+    "creationDate": "2022-06-19",
+    "followers": 56,
+    "BirthBandDate": "2001-10-10",
+    "status": "REGULAR",
+    "userLogin": "ass"
+  }
+]
+[17:38:37.914 TRACE] sent response to /127.0.0.1:51896
+[19:15:46.020 ERROR] [ырщц] wrong command
+[19:15:48.505 INFO ] [ass] [show] 
+[
+  {
+    "coordinates": {
+      "x": 1.0,
+      "y": 1
+    },
+    "genre": "POP",
+    "bestAlbum": {
+      "fullName": "fruits",
+      "type": "COLLABORATION"
+    },
+    "id": 11,
+    "name": "big",
+    "creationDate": "2022-06-19",
+    "followers": 3123123,
+    "BirthBandDate": "2020-02-20",
+    "status": "REGULAR",
+    "userLogin": "ass"
+  },
+  {
+    "coordinates": {
+      "x": 1.0,
+      "y": 2
+    },
+    "genre": "POP",
+    "bestAlbum": {
+      "fullName": "FALLEN",
+      "type": "SOLO"
+    },
+    "id": 8,
+    "name": "add",
+    "creationDate": "2022-06-19",
+    "followers": 3,
+    "BirthBandDate": "2000-11-11",
+    "status": "REGULAR",
+    "userLogin": "andrew2003"
+  },
+  {
+    "coordinates": {
+      "x": 1.0,
+      "y": 2
+    },
+    "genre": "JAZZ",
+    "bestAlbum": {
+      "fullName": "Trash",
+      "type": "SOLO"
+    },
+    "id": 9,
+    "name": "shit",
+    "creationDate": "2022-06-19",
+    "followers": 3213,
+    "BirthBandDate": "2003-11-01",
+    "status": "RECOMMENDED",
+    "userLogin": "ass"
+  },
+  {
+    "coordinates": {
+      "x": 2.0,
+      "y": 3
+    },
+    "genre": "POP",
+    "bestAlbum": {
+      "fullName": "asd",
+      "type": "SOLO"
+    },
+    "id": 13,
+    "name": "add",
+    "creationDate": "2022-06-19",
+    "followers": 4,
+    "BirthBandDate": "2000-11-11",
+    "status": "RECOMMENDED",
+    "userLogin": "alex"
+  },
+  {
+    "coordinates": {
+      "x": 5.0,
+      "y": 5
+    },
+    "genre": "RAP",
+    "bestAlbum": {
+      "fullName": "net dopse",
+      "type": "SOLO"
+    },
+    "id": 10,
+    "name": "zachet po proge",
+    "creationDate": "2022-06-19",
+    "followers": 5,
+    "BirthBandDate": "2022-06-19",
+    "status": "REGULAR",
+    "userLogin": "alex"
+  },
+  {
+    "coordinates": {
+      "x": 12.0,
+      "y": 34
+    },
+    "genre": "POP",
+    "bestAlbum": {
+      "fullName": "fruits",
+      "type": "SOLO"
+    },
+    "id": 12,
+    "name": "upp",
+    "creationDate": "2022-06-19",
+    "followers": 56,
+    "BirthBandDate": "2001-10-10",
+    "status": "REGULAR",
+    "userLogin": "ass"
+  }
+]
+[19:15:51.701 TRACE] received request from /127.0.0.1:51896
+[19:15:51.707 INFO ] [alex] [show] 
+[
+  {
+    "coordinates": {
+      "x": 1.0,
+      "y": 1
+    },
+    "genre": "POP",
+    "bestAlbum": {
+      "fullName": "fruits",
+      "type": "COLLABORATION"
+    },
+    "id": 11,
+    "name": "big",
+    "creationDate": "2022-06-19",
+    "followers": 3123123,
+    "BirthBandDate": "2020-02-20",
+    "status": "REGULAR",
+    "userLogin": "ass"
+  },
+  {
+    "coordinates": {
+      "x": 1.0,
+      "y": 2
+    },
+    "genre": "POP",
+    "bestAlbum": {
+      "fullName": "FALLEN",
+      "type": "SOLO"
+    },
+    "id": 8,
+    "name": "add",
+    "creationDate": "2022-06-19",
+    "followers": 3,
+    "BirthBandDate": "2000-11-11",
+    "status": "REGULAR",
+    "userLogin": "andrew2003"
+  },
+  {
+    "coordinates": {
+      "x": 1.0,
+      "y": 2
+    },
+    "genre": "JAZZ",
+    "bestAlbum": {
+      "fullName": "Trash",
+      "type": "SOLO"
+    },
+    "id": 9,
+    "name": "shit",
+    "creationDate": "2022-06-19",
+    "followers": 3213,
+    "BirthBandDate": "2003-11-01",
+    "status": "RECOMMENDED",
+    "userLogin": "ass"
+  },
+  {
+    "coordinates": {
+      "x": 2.0,
+      "y": 3
+    },
+    "genre": "POP",
+    "bestAlbum": {
+      "fullName": "asd",
+      "type": "SOLO"
+    },
+    "id": 13,
+    "name": "add",
+    "creationDate": "2022-06-19",
+    "followers": 4,
+    "BirthBandDate": "2000-11-11",
+    "status": "RECOMMENDED",
+    "userLogin": "alex"
+  },
+  {
+    "coordinates": {
+      "x": 5.0,
+      "y": 5
+    },
+    "genre": "RAP",
+    "bestAlbum": {
+      "fullName": "net dopse",
+      "type": "SOLO"
+    },
+    "id": 10,
+    "name": "zachet po proge",
+    "creationDate": "2022-06-19",
+    "followers": 5,
+    "BirthBandDate": "2022-06-19",
+    "status": "REGULAR",
+    "userLogin": "alex"
+  },
+  {
+    "coordinates": {
+      "x": 12.0,
+      "y": 34
+    },
+    "genre": "POP",
+    "bestAlbum": {
+      "fullName": "fruits",
+      "type": "SOLO"
+    },
+    "id": 12,
+    "name": "upp",
+    "creationDate": "2022-06-19",
+    "followers": 56,
+    "BirthBandDate": "2001-10-10",
+    "status": "REGULAR",
+    "userLogin": "ass"
+  }
+]
+[19:15:51.708 TRACE] sent response to /127.0.0.1:51896
+[19:15:55.739 TRACE] received request from /127.0.0.1:53799
+[19:15:55.742 INFO ] [ass] [show] 
+[
+  {
+    "coordinates": {
+      "x": 1.0,
+      "y": 1
+    },
+    "genre": "POP",
+    "bestAlbum": {
+      "fullName": "fruits",
+      "type": "COLLABORATION"
+    },
+    "id": 11,
+    "name": "big",
+    "creationDate": "2022-06-19",
+    "followers": 3123123,
+    "BirthBandDate": "2020-02-20",
+    "status": "REGULAR",
+    "userLogin": "ass"
+  },
+  {
+    "coordinates": {
+      "x": 1.0,
+      "y": 2
+    },
+    "genre": "POP",
+    "bestAlbum": {
+      "fullName": "FALLEN",
+      "type": "SOLO"
+    },
+    "id": 8,
+    "name": "add",
+    "creationDate": "2022-06-19",
+    "followers": 3,
+    "BirthBandDate": "2000-11-11",
+    "status": "REGULAR",
+    "userLogin": "andrew2003"
+  },
+  {
+    "coordinates": {
+      "x": 1.0,
+      "y": 2
+    },
+    "genre": "JAZZ",
+    "bestAlbum": {
+      "fullName": "Trash",
+      "type": "SOLO"
+    },
+    "id": 9,
+    "name": "shit",
+    "creationDate": "2022-06-19",
+    "followers": 3213,
+    "BirthBandDate": "2003-11-01",
+    "status": "RECOMMENDED",
+    "userLogin": "ass"
+  },
+  {
+    "coordinates": {
+      "x": 2.0,
+      "y": 3
+    },
+    "genre": "POP",
+    "bestAlbum": {
+      "fullName": "asd",
+      "type": "SOLO"
+    },
+    "id": 13,
+    "name": "add",
+    "creationDate": "2022-06-19",
+    "followers": 4,
+    "BirthBandDate": "2000-11-11",
+    "status": "RECOMMENDED",
+    "userLogin": "alex"
+  },
+  {
+    "coordinates": {
+      "x": 5.0,
+      "y": 5
+    },
+    "genre": "RAP",
+    "bestAlbum": {
+      "fullName": "net dopse",
+      "type": "SOLO"
+    },
+    "id": 10,
+    "name": "zachet po proge",
+    "creationDate": "2022-06-19",
+    "followers": 5,
+    "BirthBandDate": "2022-06-19",
+    "status": "REGULAR",
+    "userLogin": "alex"
+  },
+  {
+    "coordinates": {
+      "x": 12.0,
+      "y": 34
+    },
+    "genre": "POP",
+    "bestAlbum": {
+      "fullName": "fruits",
+      "type": "SOLO"
+    },
+    "id": 12,
+    "name": "upp",
+    "creationDate": "2022-06-19",
+    "followers": 56,
+    "BirthBandDate": "2001-10-10",
+    "status": "REGULAR",
+    "userLogin": "ass"
+  }
+]
+[19:15:55.743 TRACE] sent response to /127.0.0.1:53799
+[19:16:59.517 INFO ] [ass] [show] 
+[
+  {
+    "coordinates": {
+      "x": 1.0,
+      "y": 1
+    },
+    "genre": "POP",
+    "bestAlbum": {
+      "fullName": "fruits",
+      "type": "COLLABORATION"
+    },
+    "id": 11,
+    "name": "big",
+    "creationDate": "2022-06-19",
+    "followers": 3123123,
+    "BirthBandDate": "2020-02-20",
+    "status": "REGULAR",
+    "userLogin": "ass"
+  },
+  {
+    "coordinates": {
+      "x": 1.0,
+      "y": 2
+    },
+    "genre": "POP",
+    "bestAlbum": {
+      "fullName": "FALLEN",
+      "type": "SOLO"
+    },
+    "id": 8,
+    "name": "add",
+    "creationDate": "2022-06-19",
+    "followers": 3,
+    "BirthBandDate": "2000-11-11",
+    "status": "REGULAR",
+    "userLogin": "andrew2003"
+  },
+  {
+    "coordinates": {
+      "x": 1.0,
+      "y": 2
+    },
+    "genre": "JAZZ",
+    "bestAlbum": {
+      "fullName": "Trash",
+      "type": "SOLO"
+    },
+    "id": 9,
+    "name": "shit",
+    "creationDate": "2022-06-19",
+    "followers": 3213,
+    "BirthBandDate": "2003-11-01",
+    "status": "RECOMMENDED",
+    "userLogin": "ass"
+  },
+  {
+    "coordinates": {
+      "x": 2.0,
+      "y": 3
+    },
+    "genre": "POP",
+    "bestAlbum": {
+      "fullName": "asd",
+      "type": "SOLO"
+    },
+    "id": 13,
+    "name": "add",
+    "creationDate": "2022-06-19",
+    "followers": 4,
+    "BirthBandDate": "2000-11-11",
+    "status": "RECOMMENDED",
+    "userLogin": "alex"
+  },
+  {
+    "coordinates": {
+      "x": 5.0,
+      "y": 5
+    },
+    "genre": "RAP",
+    "bestAlbum": {
+      "fullName": "net dopse",
+      "type": "SOLO"
+    },
+    "id": 10,
+    "name": "zachet po proge",
+    "creationDate": "2022-06-19",
+    "followers": 5,
+    "BirthBandDate": "2022-06-19",
+    "status": "REGULAR",
+    "userLogin": "alex"
+  },
+  {
+    "coordinates": {
+      "x": 12.0,
+      "y": 34
+    },
+    "genre": "POP",
+    "bestAlbum": {
+      "fullName": "fruits",
+      "type": "SOLO"
+    },
+    "id": 12,
+    "name": "upp",
+    "creationDate": "2022-06-19",
+    "followers": 56,
+    "BirthBandDate": "2001-10-10",
+    "status": "REGULAR",
+    "userLogin": "ass"
+  }
+]
+[19:17:02.860 TRACE] received request from /127.0.0.1:51896
+[19:17:02.864 INFO ] [alex] [show] 
+[
+  {
+    "coordinates": {
+      "x": 1.0,
+      "y": 1
+    },
+    "genre": "POP",
+    "bestAlbum": {
+      "fullName": "fruits",
+      "type": "COLLABORATION"
+    },
+    "id": 11,
+    "name": "big",
+    "creationDate": "2022-06-19",
+    "followers": 3123123,
+    "BirthBandDate": "2020-02-20",
+    "status": "REGULAR",
+    "userLogin": "ass"
+  },
+  {
+    "coordinates": {
+      "x": 1.0,
+      "y": 2
+    },
+    "genre": "POP",
+    "bestAlbum": {
+      "fullName": "FALLEN",
+      "type": "SOLO"
+    },
+    "id": 8,
+    "name": "add",
+    "creationDate": "2022-06-19",
+    "followers": 3,
+    "BirthBandDate": "2000-11-11",
+    "status": "REGULAR",
+    "userLogin": "andrew2003"
+  },
+  {
+    "coordinates": {
+      "x": 1.0,
+      "y": 2
+    },
+    "genre": "JAZZ",
+    "bestAlbum": {
+      "fullName": "Trash",
+      "type": "SOLO"
+    },
+    "id": 9,
+    "name": "shit",
+    "creationDate": "2022-06-19",
+    "followers": 3213,
+    "BirthBandDate": "2003-11-01",
+    "status": "RECOMMENDED",
+    "userLogin": "ass"
+  },
+  {
+    "coordinates": {
+      "x": 2.0,
+      "y": 3
+    },
+    "genre": "POP",
+    "bestAlbum": {
+      "fullName": "asd",
+      "type": "SOLO"
+    },
+    "id": 13,
+    "name": "add",
+    "creationDate": "2022-06-19",
+    "followers": 4,
+    "BirthBandDate": "2000-11-11",
+    "status": "RECOMMENDED",
+    "userLogin": "alex"
+  },
+  {
+    "coordinates": {
+      "x": 5.0,
+      "y": 5
+    },
+    "genre": "RAP",
+    "bestAlbum": {
+      "fullName": "net dopse",
+      "type": "SOLO"
+    },
+    "id": 10,
+    "name": "zachet po proge",
+    "creationDate": "2022-06-19",
+    "followers": 5,
+    "BirthBandDate": "2022-06-19",
+    "status": "REGULAR",
+    "userLogin": "alex"
+  },
+  {
+    "coordinates": {
+      "x": 12.0,
+      "y": 34
+    },
+    "genre": "POP",
+    "bestAlbum": {
+      "fullName": "fruits",
+      "type": "SOLO"
+    },
+    "id": 12,
+    "name": "upp",
+    "creationDate": "2022-06-19",
+    "followers": 56,
+    "BirthBandDate": "2001-10-10",
+    "status": "REGULAR",
+    "userLogin": "ass"
+  }
+]
+[19:17:02.865 TRACE] sent response to /127.0.0.1:51896
+[19:17:06.048 TRACE] received request from /127.0.0.1:53799
+[19:17:06.051 INFO ] [ass] [show] 
+[
+  {
+    "coordinates": {
+      "x": 1.0,
+      "y": 1
+    },
+    "genre": "POP",
+    "bestAlbum": {
+      "fullName": "fruits",
+      "type": "COLLABORATION"
+    },
+    "id": 11,
+    "name": "big",
+    "creationDate": "2022-06-19",
+    "followers": 3123123,
+    "BirthBandDate": "2020-02-20",
+    "status": "REGULAR",
+    "userLogin": "ass"
+  },
+  {
+    "coordinates": {
+      "x": 1.0,
+      "y": 2
+    },
+    "genre": "POP",
+    "bestAlbum": {
+      "fullName": "FALLEN",
+      "type": "SOLO"
+    },
+    "id": 8,
+    "name": "add",
+    "creationDate": "2022-06-19",
+    "followers": 3,
+    "BirthBandDate": "2000-11-11",
+    "status": "REGULAR",
+    "userLogin": "andrew2003"
+  },
+  {
+    "coordinates": {
+      "x": 1.0,
+      "y": 2
+    },
+    "genre": "JAZZ",
+    "bestAlbum": {
+      "fullName": "Trash",
+      "type": "SOLO"
+    },
+    "id": 9,
+    "name": "shit",
+    "creationDate": "2022-06-19",
+    "followers": 3213,
+    "BirthBandDate": "2003-11-01",
+    "status": "RECOMMENDED",
+    "userLogin": "ass"
+  },
+  {
+    "coordinates": {
+      "x": 2.0,
+      "y": 3
+    },
+    "genre": "POP",
+    "bestAlbum": {
+      "fullName": "asd",
+      "type": "SOLO"
+    },
+    "id": 13,
+    "name": "add",
+    "creationDate": "2022-06-19",
+    "followers": 4,
+    "BirthBandDate": "2000-11-11",
+    "status": "RECOMMENDED",
+    "userLogin": "alex"
+  },
+  {
+    "coordinates": {
+      "x": 5.0,
+      "y": 5
+    },
+    "genre": "RAP",
+    "bestAlbum": {
+      "fullName": "net dopse",
+      "type": "SOLO"
+    },
+    "id": 10,
+    "name": "zachet po proge",
+    "creationDate": "2022-06-19",
+    "followers": 5,
+    "BirthBandDate": "2022-06-19",
+    "status": "REGULAR",
+    "userLogin": "alex"
+  },
+  {
+    "coordinates": {
+      "x": 12.0,
+      "y": 34
+    },
+    "genre": "POP",
+    "bestAlbum": {
+      "fullName": "fruits",
+      "type": "SOLO"
+    },
+    "id": 12,
+    "name": "upp",
+    "creationDate": "2022-06-19",
+    "followers": 56,
+    "BirthBandDate": "2001-10-10",
+    "status": "REGULAR",
+    "userLogin": "ass"
+  }
+]
+[19:17:06.052 TRACE] sent response to /127.0.0.1:53799
+[19:17:13.057 TRACE] received request from /127.0.0.1:53799
+[19:17:13.059 ERROR] [aee] [login] login or password is incorrect
+[19:17:13.061 TRACE] sent response to /127.0.0.1:53799
+[19:17:20.363 TRACE] received request from /127.0.0.1:53799
+[19:17:20.364 INFO ] [ass] [login] login successful
+[19:17:20.364 TRACE] sent response to /127.0.0.1:53799

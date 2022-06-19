@@ -3,13 +3,13 @@ package org.andrea.data;
 import java.io.Serializable;
 
 /**
- * Organization class
+ * BestAlbum class
  */
-public class Organization implements Validatable, Serializable {
+public class BestAlbum implements Validatable, Serializable {
     private final String fullName; //Длина строки не должна быть больше 1237, Строка не может быть пустой, Поле может быть null
-    private final OrganizationType type; //Поле не может быть null
+    private final AlbumType type; //Поле не может быть null
 
-    public Organization(String name, OrganizationType t) {
+    public BestAlbum(String name, AlbumType t) {
         fullName = name;
         type = t;
     }
@@ -24,9 +24,9 @@ public class Organization implements Validatable, Serializable {
 
 
     /**
-     * @return OrganizationType
+     * @return AlbumType
      */
-    public OrganizationType getType() {
+    public AlbumType getType() {
         return type;
     }
 

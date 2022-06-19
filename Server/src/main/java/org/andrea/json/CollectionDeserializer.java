@@ -1,7 +1,7 @@
 package org.andrea.json;
 
 import com.google.gson.*;
-import org.andrea.data.Worker;
+import org.andrea.data.MusicBand;
 import org.andrea.log.Log;
 
 
@@ -14,7 +14,7 @@ import java.util.concurrent.ConcurrentLinkedDeque;
 /**
  * type adapter for json deserialization
  */
-public class CollectionDeserializer implements JsonDeserializer<Deque<Worker>> {
+public class CollectionDeserializer implements JsonDeserializer<Deque<MusicBand>> {
     private final Set<Integer> uniqueIds;
 
     /**
@@ -27,35 +27,35 @@ public class CollectionDeserializer implements JsonDeserializer<Deque<Worker>> {
     }
 
     @Override
-    public Deque<Worker> deserialize(JsonElement json, Type type, JsonDeserializationContext context) throws JsonParseException {
-        Deque<Worker> collection = new ConcurrentLinkedDeque<>();
+    public Deque<MusicBand> deserialize(JsonElement json, Type type, JsonDeserializationContext context) throws JsonParseException {
+        Deque<MusicBand> collection = new ConcurrentLinkedDeque<>();
         JsonArray workers = json.getAsJsonArray();
         int damagedElements = 0;
         for (JsonElement jsonWorker : workers) {
-            Worker worker = null;
+            MusicBand musicBand = null;
             try {
                 if (jsonWorker.getAsJsonObject().entrySet().isEmpty()) {
-                    Log.logger.error("empty worker found");
-                    throw new JsonParseException("empty worker");
+                    Log.logger.error("empty musicBand found");
+                    throw new JsonParseException("empty musicBand");
                 }
                 if (!jsonWorker.getAsJsonObject().has("id")) {
-                    Log.logger.error("found worker without id");
+                    Log.logger.error("found musicBand without id");
                     throw new JsonParseException("no id");
                 }
-                worker = context.deserialize(jsonWorker, Worker.class);
+                musicBand = context.deserialize(jsonWorker, MusicBand.class);
 
-                Integer id = worker.getId();
+                Integer id = musicBand.getId();
 
                 if (uniqueIds.contains(id)) {
-                    Log.logger.error("database already contains worker with id #" + id);
-                    throw new JsonParseException("id isnt unique");
+                    Log.logger.error("database already contains musicBand with id #" + id);
+                    throw new JsonParseException("id isn't unique");
                 }
-                if (!worker.validate()) {
-                    Log.logger.error("worker #" + id + " doesnt match specific conditions");
-                    throw new JsonParseException("invalid worker data");
+                if (!musicBand.validate()) {
+                    Log.logger.error("musicBand #" + id + " doesnt match specific conditions");
+                    throw new JsonParseException("invalid musicBand data");
                 }
                 uniqueIds.add(id);
-                collection.add(worker);
+                collection.add(musicBand);
             } catch (JsonParseException e) {
                 damagedElements += 1;
             }

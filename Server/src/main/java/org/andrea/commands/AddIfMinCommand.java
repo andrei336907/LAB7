@@ -1,20 +1,20 @@
 package org.andrea.commands;
 
 
-import org.andrea.collection.WorkerManager;
+import org.andrea.collection.MusicBandManager;
 
 public class AddIfMinCommand extends CommandImpl {
-    private final WorkerManager collectionManager;
+    private final MusicBandManager collectionManager;
 
-    public AddIfMinCommand(WorkerManager cm) {
+    public AddIfMinCommand(MusicBandManager cm) {
         super("add_if_min", CommandType.NORMAL);
         collectionManager = cm;
     }
 
     @Override
     public String execute() {
-        collectionManager.addIfMin(getWorkerArg());
-        return ("Added element: " + getWorkerArg().toString());
+        collectionManager.addIfMin(getBandArg());
+        return ("Added element: " + getBandArg().toString());
     }
 
 }

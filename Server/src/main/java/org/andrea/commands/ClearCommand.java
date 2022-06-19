@@ -2,17 +2,17 @@ package org.andrea.commands;
 
 
 import org.andrea.auth.User;
-import org.andrea.collection.WorkerManager;
-import org.andrea.database.WorkerDatabaseManager;
+import org.andrea.collection.MusicBandManager;
+import org.andrea.database.MusicBandDatabaseManager;
 import org.andrea.exceptions.EmptyCollectionException;
 import org.andrea.exceptions.InvalidDataException;
 
 public class ClearCommand extends CommandImpl {
-    private final WorkerDatabaseManager collectionManager;
+    private final MusicBandDatabaseManager collectionManager;
 
-    public ClearCommand(WorkerManager cm) {
+    public ClearCommand(MusicBandManager cm) {
         super("clear", CommandType.NORMAL);
-        collectionManager = (WorkerDatabaseManager) cm;
+        collectionManager = (MusicBandDatabaseManager) cm;
     }
 
     @Override

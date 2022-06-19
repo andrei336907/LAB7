@@ -4,7 +4,7 @@ package org.andrea.database;
 
 import org.andrea.auth.User;
 import org.andrea.auth.UserManager;
-import org.andrea.collection.WorkerDequeManager;
+import org.andrea.collection.MusicBandDequeManager;
 import org.andrea.data.*;
 import org.andrea.exceptions.CollectionException;
 import org.andrea.exceptions.DatabaseException;
@@ -13,7 +13,6 @@ import org.andrea.exceptions.InvalidEnumException;
 import org.andrea.log.Log;
 import org.andrea.utils.DateConverter;
 
-import javax.swing.text.Position;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -23,14 +22,14 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
-public class WorkerDatabaseManager extends WorkerDequeManager {
+public class MusicBandDatabaseManager extends MusicBandDequeManager {
     //language=SQL
-    private final static String INSERT_WORKER_QUERY = "INSERT INTO WORKERS (name, coordinates_x, coordinates_y, creation_date, salary, end_date, position, status, organization_full_name, organization_type, user_login,id)" +
+    private final static String INSERT_MUSIC_BAND_QUERY = "INSERT INTO BANDS (name, coordinates_x, coordinates_y, creation_date, followers, birth_band_date, genre, status, album_full_name, album_type, user_login,id)" +
             "VALUES (?,?,?,?,?,?,?,?,?,?,?,DEFAULT) RETURNING id; ";
     private final DatabaseHandler databaseHandler;
     private final UserManager userManager;
 
-    public WorkerDatabaseManager(DatabaseHandler c, UserManager userManager) throws DatabaseException {
+    public MusicBandDatabaseManager(DatabaseHandler c, UserManager userManager) throws DatabaseException {
         super();
         databaseHandler = c;
         this.userManager = userManager;
@@ -38,27 +37,27 @@ public class WorkerDatabaseManager extends WorkerDequeManager {
     }
 
     private void create() throws DatabaseException {
-        //language=SQL
+//        language=SQL
         String create =
-                "CREATE TABLE IF NOT EXISTS WORKERS (" +
+                "CREATE TABLE IF NOT EXISTS BANDS (" +
                         "id SERIAL PRIMARY KEY CHECK ( id > 0 )," +
                         "name TEXT NOT NULL CHECK (name <> '')," +
                         "coordinates_x FLOAT NOT NULL ," +
                         "coordinates_y BIGINT NOT NULL CHECK (coordinates_y > -123 )," +
                         "creation_date TEXT NOT NULL," +
-                        "salary BIGINT NOT NULL CHECK(salary > 0)," +
-                        "end_date TEXT," +
-                        "position TEXT," +
+                        "followers BIGINT NOT NULL CHECK(followers > 0)," +
+                        "birth_band_date TEXT," +
+                        "genre TEXT," +
                         "status TEXT NOT NULL," +
-                        "organization_full_name VARCHAR(1237) CHECK (organization_full_name <> '')," +
-                        "organization_type TEXT NOT NULL," +
+                        "album_full_name VARCHAR(1237) CHECK (album_full_name <> '')," +
+                        "album_type TEXT NOT NULL," +
                         "user_login TEXT NOT NULL REFERENCES USERS(login)" +
                         ");";
 
         try (PreparedStatement createStatement = databaseHandler.getPreparedStatement(create)) {
             createStatement.execute();
         } catch (SQLException e) {
-            throw new DatabaseException("cannot create worker database");
+            throw new DatabaseException("cannot create bands database");
         }
     }
 
@@ -73,80 +72,81 @@ public class WorkerDatabaseManager extends WorkerDequeManager {
         }
     }
 
-    private void setWorker(PreparedStatement statement, Worker worker) throws SQLException {
-        statement.setString(1, worker.getName());
-        statement.setFloat(2, worker.getCoordinates().getX());
-        statement.setLong(3, worker.getCoordinates().getY());
-        statement.setString(4, DateConverter.dateToString(worker.getCreationDate()));
-        statement.setLong(5, worker.getSalary());
+    private void setBand(PreparedStatement statement, MusicBand musicBand) throws SQLException {
+        statement.setString(1, musicBand.getName());
+        statement.setFloat(2, musicBand.getCoordinates().getX());
+        statement.setLong(3, musicBand.getCoordinates().getY());
+        statement.setString(4, DateConverter.dateToString(musicBand.getCreationDate()));
+        statement.setLong(5, musicBand.getFollowers());
 
 
-        if (worker.getEndDate() == null) statement.setString(6, null);
-        else statement.setString(6, DateConverter.dateToString(worker.getEndDate()));
+        if (musicBand.getBirthBandDate() == null) statement.setString(6, null);
+        else statement.setString(6, DateConverter.dateToString(musicBand.getBirthBandDate()));
 
-        if (worker.getPosition() == null) statement.setString(7, null);
-        else statement.setString(7, worker.getPosition().toString());
+        if (musicBand.getGenre() == null) statement.setString(7, null);
+        else statement.setString(7, musicBand.getGenre().toString());
 
-        statement.setString(8, worker.getStatus().toString());
 
-        statement.setString(9, worker.getOrganization().getFullName());
-        statement.setString(10, worker.getOrganization().getType().toString());
+        statement.setString(8, musicBand.getStatus().toString());
 
-        statement.setString(11, worker.getUserLogin());
+        statement.setString(9, musicBand.getBestAlbum().getFullName());
+        statement.setString(10, musicBand.getBestAlbum().getType().toString());
+
+        statement.setString(11, musicBand.getUserLogin());
 
     }
 
-    private Worker getWorker(ResultSet resultSet) throws SQLException, InvalidDataException {
+    private MusicBand getBand(ResultSet resultSet) throws SQLException, InvalidDataException {
         Coordinates coordinates = new Coordinates(resultSet.getFloat("coordinates_x"), resultSet.getLong("coordinates_y"));
         Integer id = resultSet.getInt("id");
         String name = resultSet.getString("name");
 
         Date creationDate = DateConverter.parseDate(resultSet.getString("creation_date"));
-        long salary = resultSet.getLong("salary");
+        long followers = resultSet.getLong("followers");
 
-        String endDateStr = resultSet.getString("end_date");
+        String endDateStr = resultSet.getString("birth_band_date");
         LocalDate endDate = null;
         if (endDateStr != null) endDate = DateConverter.parseLocalDate(endDateStr);
 
-        String positionStr = resultSet.getString("genre");
-        Genre position = null;
-        if (positionStr != null) {
+        String genreStr = resultSet.getString("genre");
+        Genre genre = null;
+        if (genreStr != null) {
             try {
-                position = Genre.valueOf(positionStr);
+                genre = Genre.valueOf(genreStr);
             } catch (IllegalArgumentException e) {
                 throw new InvalidEnumException();
             }
         }
         Status status;
-        OrganizationType type;
+        AlbumType type;
         try {
             status = Status.valueOf(resultSet.getString("status"));
-            type = OrganizationType.valueOf(resultSet.getString("organization_type"));
+            type = AlbumType.valueOf(resultSet.getString("album_type"));
         } catch (IllegalArgumentException e) {
             throw new InvalidEnumException();
         }
-        String fullName = resultSet.getString("organization_full_name");
-        Organization organization = new Organization(fullName, type);
-        Worker worker = new Worker(name, coordinates, salary, endDate, position, status, organization);
-        worker.setCreationDate(creationDate);
-        worker.setId(id);
-        worker.setUserLogin(resultSet.getString("user_login"));
-        if (!userManager.isPresent(worker.getUserLogin())) throw new DatabaseException("no user found");
-        return worker;
+        String fullName = resultSet.getString("album_full_name");
+        BestAlbum bestAlbum = new BestAlbum(fullName, type);
+        MusicBand musicBand = new MusicBand(name, coordinates, followers, endDate, genre, status, bestAlbum);
+        musicBand.setCreationDate(creationDate);
+        musicBand.setId(id);
+        musicBand.setUserLogin(resultSet.getString("user_login"));
+        if (!userManager.isPresent(musicBand.getUserLogin())) throw new DatabaseException("no user found");
+        return musicBand;
     }
 
     @Override
-    public void add(Worker worker) {
+    public void add(MusicBand musicBand) {
 
         databaseHandler.setCommitMode();
         databaseHandler.setSavepoint();
-        try (PreparedStatement statement = databaseHandler.getPreparedStatement(INSERT_WORKER_QUERY, true)) {
-            setWorker(statement, worker);
+        try (PreparedStatement statement = databaseHandler.getPreparedStatement(INSERT_MUSIC_BAND_QUERY, true)) {
+            setBand(statement, musicBand);
             if (statement.executeUpdate() == 0) throw new DatabaseException();
             ResultSet resultSet = statement.getGeneratedKeys();
 
             if (!resultSet.next()) throw new DatabaseException();
-            worker.setId(resultSet.getInt(resultSet.findColumn("id")));
+            musicBand.setId(resultSet.getInt(resultSet.findColumn("id")));
 
             databaseHandler.commit();
         } catch (SQLException | DatabaseException e) {
@@ -155,13 +155,13 @@ public class WorkerDatabaseManager extends WorkerDequeManager {
         } finally {
             databaseHandler.setNormalMode();
         }
-        super.addWithoutIdGeneration(worker);
+        super.addWithoutIdGeneration(musicBand);
     }
 
     @Override
     public void removeByID(Integer id) {
         //language=SQL
-        String query = "DELETE FROM WORKERS WHERE id = ?;";
+        String query = "DELETE FROM BANDS WHERE id = ?;";
         try (PreparedStatement statement = databaseHandler.getPreparedStatement(query)) {
             statement.setInt(1, id);
             statement.execute();
@@ -177,61 +177,61 @@ public class WorkerDatabaseManager extends WorkerDequeManager {
     }
 
     @Override
-    public void updateByID(Integer id, Worker worker) {
+    public void updateByID(Integer id, MusicBand musicBand) {
         databaseHandler.setCommitMode();
         databaseHandler.setSavepoint();
         //language=SQL
-        String sql = "UPDATE WORKERS SET " +
+        String sql = "UPDATE BANDS SET " +
                 "name=?," +
                 "coordinates_x=?," +
                 "coordinates_y=?," +
                 "creation_date=?," +
-                "salary=?," +
-                "end_date=?," +
-                "position=?," +
+                "followers=?," +
+                "birth_band_date=?," +
+                "genre=?," +
                 "status=?," +
-                "organization_full_name=?," +
-                "organization_type=?," +
+                "album_full_name=?," +
+                "album_type=?," +
                 "user_login=?" +
                 "WHERE id=?";
         try (PreparedStatement statement = databaseHandler.getPreparedStatement(sql)) {
-            setWorker(statement, worker);
+            setBand(statement, musicBand);
             statement.setInt(12, id);
             statement.execute();
             databaseHandler.commit();
         } catch (SQLException e) {
             databaseHandler.rollback();
-            throw new DatabaseException("cannot update worker #" + worker.getId() + " in database");
+            throw new DatabaseException("cannot update musicBand #" + musicBand.getId() + " in database");
         } finally {
             databaseHandler.setNormalMode();
         }
-        super.updateByID(id, worker);
+        super.updateByID(id, musicBand);
     }
 
     @Override
-    public void addIfMax(Worker worker) {
+    public void addIfMax(MusicBand musicBand) {
         //language=SQL
-        String getMaxQuery = "SELECT MAX(salary) FROM WORKERS";
+        String getMaxQuery = "SELECT MAX(followers) FROM BANDS";
 
         if (getCollection().isEmpty()) {
-            add(worker);
+            add(musicBand);
             return;
         }
         databaseHandler.setCommitMode();
         databaseHandler.setSavepoint();
         try (Statement getStatement = databaseHandler.getStatement();
-             PreparedStatement insertStatement = databaseHandler.getPreparedStatement(INSERT_WORKER_QUERY)) {
+             PreparedStatement insertStatement = databaseHandler.getPreparedStatement(INSERT_MUSIC_BAND_QUERY)) {
 
             ResultSet resultSet = getStatement.executeQuery(getMaxQuery);
             if (!resultSet.next()) throw new DatabaseException("unable to add");
 
-            long maxSalary = resultSet.getLong(1);
-            if (worker.getSalary() < maxSalary)
-                throw new DatabaseException("unable to add, max salary is " + maxSalary + " current salary is " + worker.getSalary());
+            long maxFollowers = resultSet.getLong(1);
+            if (musicBand.getFollowers() < maxFollowers)
+                throw new DatabaseException("unable to add, max followers is " + maxFollowers + " current followers is " + musicBand.getFollowers());
 
-            setWorker(insertStatement, worker);
+            setBand(insertStatement, musicBand);
 
-            worker.setId(resultSet.getInt("id"));
+            musicBand.setId(resultSet.getInt("id"));
             databaseHandler.commit();
         } catch (SQLException e) {
             databaseHandler.rollback();
@@ -239,33 +239,33 @@ public class WorkerDatabaseManager extends WorkerDequeManager {
         } finally {
             databaseHandler.setNormalMode();
         }
-        super.addWithoutIdGeneration(worker);
+        super.addWithoutIdGeneration(musicBand);
     }
 
     @Override
-    public void addIfMin(Worker worker) {
+    public void addIfMin(MusicBand musicBand) {
         //language=SQL
-        String getMaxQuery = "SELECT MIN(salary) FROM WORKERS";
+        String getMaxQuery = "SELECT MIN(followers) FROM BANDS";
 
         if (getCollection().isEmpty()) {
-            add(worker);
+            add(musicBand);
             return;
         }
         databaseHandler.setCommitMode();
         databaseHandler.setSavepoint();
         try (Statement getStatement = databaseHandler.getStatement();
-             PreparedStatement insertStatement = databaseHandler.getPreparedStatement(INSERT_WORKER_QUERY)) {
+             PreparedStatement insertStatement = databaseHandler.getPreparedStatement(INSERT_MUSIC_BAND_QUERY)) {
 
             ResultSet resultSet = getStatement.executeQuery(getMaxQuery);
             if (!resultSet.next()) throw new DatabaseException("unable to add");
 
-            long minSalary = resultSet.getLong(1);
-            if (worker.getSalary() > minSalary)
-                throw new DatabaseException("unable to add, min salary is " + minSalary + " current salary is " + worker.getSalary());
+            long minFollowers = resultSet.getLong(1);
+            if (musicBand.getFollowers() > minFollowers)
+                throw new DatabaseException("unable to add, min followers is " + minFollowers + " current followers is " + musicBand.getFollowers());
 
-            setWorker(insertStatement, worker);
+            setBand(insertStatement, musicBand);
 
-            worker.setId(resultSet.getInt("id"));
+            musicBand.setId(resultSet.getInt("id"));
             databaseHandler.commit();
         } catch (SQLException e) {
             databaseHandler.rollback();
@@ -273,14 +273,14 @@ public class WorkerDatabaseManager extends WorkerDequeManager {
         } finally {
             databaseHandler.setNormalMode();
         }
-        super.addWithoutIdGeneration(worker);
+        super.addWithoutIdGeneration(musicBand);
     }
 
     public void clear(User user) {
         databaseHandler.setCommitMode();
         databaseHandler.setSavepoint();
         Set<Integer> ids = new HashSet<>();
-        try (PreparedStatement statement = databaseHandler.getPreparedStatement("DELETE FROM WORKERS WHERE user_login=? RETURNING id")) {
+        try (PreparedStatement statement = databaseHandler.getPreparedStatement("DELETE FROM BANDS WHERE user_login=? RETURNING id")) {
             statement.setString(1, user.getLogin());
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
@@ -301,15 +301,15 @@ public class WorkerDatabaseManager extends WorkerDequeManager {
     public void deserializeCollection(String ignored) {
         if (!getCollection().isEmpty()) super.clear();
         //language=SQL
-        String query = "SELECT * FROM WORKERS";
+        String query = "SELECT * FROM BANDS";
         try (PreparedStatement selectAllStatement = databaseHandler.getPreparedStatement(query)) {
             ResultSet resultSet = selectAllStatement.executeQuery();
             int damagedElements = 0;
             while (resultSet.next()) {
                 try {
-                    Worker worker = getWorker(resultSet);
-                    if (!worker.validate()) throw new InvalidDataException("element is damaged");
-                    super.addWithoutIdGeneration(worker);
+                    MusicBand musicBand = getBand(resultSet);
+                    if (!musicBand.validate()) throw new InvalidDataException("element is damaged");
+                    super.addWithoutIdGeneration(musicBand);
                 } catch (InvalidDataException | SQLException e) {
                     damagedElements += 1;
                 }

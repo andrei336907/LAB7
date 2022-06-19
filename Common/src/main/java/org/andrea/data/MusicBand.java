@@ -10,19 +10,20 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Comparator;
 import java.util.Date;
+import java.util.Locale;
 
 /**
- * Worker class
+ * MusicBand class
  */
-public class Worker implements Collectionable, Serializable {
+public class MusicBand implements Collectionable, Serializable {
     private final Coordinates coordinates; //Поле не может быть null
     private final Genre genre; //Поле может быть null
-    private final Organization organization; //Поле может быть null
+    private final BestAlbum bestAlbum; //Поле может быть null
     private int id; //Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
     private String name; //Поле не может быть null, Строка не может быть пустой
     private Date creationDate; //Поле не может быть null, Значение этого поля должно генерироваться автоматически
-    private long salary; //Значение поля должно быть больше 0
-    private LocalDate endDate; //Поле может быть null
+    private long followers; //Значение поля должно быть больше 0
+    private LocalDate BirthBandDate; //Поле может быть null
     private Status status; //Поле не может быть null
     private String userLogin;
 
@@ -31,24 +32,23 @@ public class Worker implements Collectionable, Serializable {
      *
      * @param name
      * @param coordinates
-     * @param salary
-     * @param endDate
+     * @param followers
+     * @param BirthBandDate
      * @param genre
      * @param status
-     * @param organization
+     * @param bestAlbum
      */
-    public Worker(String name, Coordinates coordinates, Long salary, LocalDate endDate, Genre genre, Status status
-            , Organization organization
-    ) {
+    public MusicBand(String name, Coordinates coordinates, Long followers, LocalDate BirthBandDate, Genre genre, Status status
+            , BestAlbum bestAlbum) {
 
 
         this.name = name;
         this.coordinates = coordinates;
-        this.salary = salary;
-        this.endDate = endDate;
+        this.followers = followers;
+        this.BirthBandDate = BirthBandDate;
         this.genre = genre;
         this.status = status;
-        this.organization = organization;
+        this.bestAlbum = bestAlbum;
     }
 
     /**
@@ -89,23 +89,23 @@ public class Worker implements Collectionable, Serializable {
     /**
      * @return long
      */
-    public long getSalary() {
-        return salary;
+    public long getFollowers() {
+        return followers;
     }
 
-    public void setSalary(long s) {
-        salary = s;
+    public void setFollowers(long s) {
+        followers = s;
     }
 
     public Coordinates getCoordinates() {
         return coordinates;
     }
 
-    public Organization getOrganization() {
-        return organization;
+    public BestAlbum getBestAlbum() {
+        return bestAlbum;
     }
 
-    public Genre getPosition() {
+    public Genre getGenre() {
         return genre;
     }
 
@@ -128,12 +128,12 @@ public class Worker implements Collectionable, Serializable {
     /**
      * @return LocalDate
      */
-    public LocalDate getEndDate() {
-        return endDate;
+    public LocalDate getBirthBandDate() {
+        return BirthBandDate;
     }
 
-    public void setEndDate(LocalDate date) {
-        endDate = date;
+    public void setBirthBandDate(LocalDate date) {
+        BirthBandDate = date;
     }
 
 
@@ -145,9 +145,9 @@ public class Worker implements Collectionable, Serializable {
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         String strCreationDate = dateFormat.format(creationDate);
         String strEndDate = "";
-        if (endDate != null) {
+        if (BirthBandDate != null) {
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-            strEndDate = endDate.format(formatter);
+            strEndDate = BirthBandDate.format(formatter);
         }
         String s = "";
         s += "{\n";
@@ -155,11 +155,11 @@ public class Worker implements Collectionable, Serializable {
         s += "  \"name\" : " + "\"" + name + "\"" + ",\n";
         s += "  \"coordinates\" : " + coordinates.toString() + ",\n";
         s += "  \"creationDate\" : " + "\"" + strCreationDate + "\"" + ",\n";
-        s += "  \"salary\" : " + salary + ",\n";
-        if (endDate != null) s += "  \"endDate\" : " + "\"" + strEndDate + "\"" + ",\n";
+        s += "  \"followers\" : " + followers + ",\n";
+        if (BirthBandDate != null) s += "  \"BirthBandDate\" : " + "\"" + strEndDate + "\"" + ",\n";
         if (genre != null) s += "  \"genre\" : " + "\"" + genre + "\"" + ",\n";
         s += "  \"status\" : " + "\"" + status.toString() + "\"" + ",\n";
-        s += "  \"organization\" : " + organization.toString() + "\n";
+        s += "  \"bestAlbum\" : " + bestAlbum.toString() + "\n";
         if (userLogin != null) s += "  \"userLogin\" : " + userLogin + "\n";
         s += "}";
         return s;
@@ -172,7 +172,7 @@ public class Worker implements Collectionable, Serializable {
     @Override
     public boolean equals(Object obj) {
         if (obj == null || this.getClass() != obj.getClass()) return false;
-        Worker another = (Worker) obj;
+        MusicBand another = (MusicBand) obj;
         return this.getId() == another.getId();
     }
 
@@ -182,7 +182,7 @@ public class Worker implements Collectionable, Serializable {
      * @return int
      */
     public int compareTo(Collectionable worker) {
-        return Long.compare(this.salary, worker.getSalary());
+        return Long.compare(this.followers, worker.getFollowers());
     }
 
     public void setUser(User usr) {
@@ -195,8 +195,8 @@ public class Worker implements Collectionable, Serializable {
     public boolean validate() {
         return (
                 coordinates != null && coordinates.validate() &&
-                        (organization == null || organization.validate()) &&
-                        (salary > 0) && (id > 0) &&
+                        (bestAlbum == null || bestAlbum.validate()) &&
+                        (followers > 0) && (id > 0) &&
                         name != null && !name.equals("") &&
                         status != null &&
                         creationDate != null
@@ -207,8 +207,8 @@ public class Worker implements Collectionable, Serializable {
     /**
      * comparator for sorting
      */
-    public static class SortingComparator implements Comparator<Worker> {
-        public int compare(Worker first, Worker second) {
+    public static class SortingComparator implements Comparator<MusicBand> {
+        public int compare(MusicBand first, MusicBand second) {
             int result = Double.compare(first.getCoordinates().getX(), second.getCoordinates().getX());
             if (result == 0) {
                 // both X are equal -> compare Y too

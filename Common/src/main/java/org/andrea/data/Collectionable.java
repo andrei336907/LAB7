@@ -14,7 +14,7 @@ public interface Collectionable extends Comparable<Collectionable>, Validatable 
      */
     void setId(int ID);
 
-    long getSalary();
+    long getFollowers();
 
     String getName();
 

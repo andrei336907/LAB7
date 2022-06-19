@@ -47,36 +47,36 @@ public class ConsoleInputManager extends InputManagerImpl {
     }
 
     @Override
-    public long readSalary() {
-        return new Question<Long>("enter salary:", super::readSalary).getAnswer();
+    public long readFollowers() {
+        return new Question<Long>("enter followers:", super::readFollowers).getAnswer();
     }
 
     @Override
     public LocalDate readEndDate() {
-        return new Question<LocalDate>("enter endDate:", super::readEndDate).getAnswer();
+        return new Question<LocalDate>("enter birth band Date:", super::readEndDate).getAnswer();
     }
 
     @Override
-    public Genre readPosition() {
-        return new Question<Genre>("enter position(RAP, POP, JAZZ, ROCK):", super::readPosition).getAnswer();
+    public Genre readGenre() {
+        return new Question<Genre>("enter genre(RAP, POP, JAZZ, ROCK):", super::readGenre).getAnswer();
     }
 
     @Override
     public Status readStatus() {
-        return new Question<Status>("enter status(RECOMMENDED_FOR_PROMOTION, REGULAR, PROBATION):", super::readStatus).getAnswer();
+        return new Question<Status>("enter status(RECOMMENDED, REGULAR):", super::readStatus).getAnswer();
     }
 
     @Override
-    public OrganizationType readOrganizationType() {
-        return new Question<OrganizationType>("enter organization type(PUBLIC, GOVERNMENT, PRIVATE_LIMITED_COMPANY, OPEN_JOINT_STOCK_COMPANY):", super::readOrganizationType).getAnswer();
+    public AlbumType readAlbumType() {
+        return new Question<AlbumType>("enter Album Type(SOLO, COLLABORATION):", super::readAlbumType).getAnswer();
     }
 
     @Override
-    public Organization readOrganization() {
-        print("enter organization");
+    public BestAlbum readAlbum() {
+        print("enter Best Album");
         String fullName = readFullName();
-        OrganizationType orgType = readOrganizationType();
-        return new Organization(fullName, orgType);
+        AlbumType orgType = readAlbumType();
+        return new BestAlbum(fullName, orgType);
     }
 
     @Override

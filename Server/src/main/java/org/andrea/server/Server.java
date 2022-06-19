@@ -3,17 +3,17 @@ package org.andrea.server;
 
 import org.andrea.auth.User;
 import org.andrea.auth.UserManager;
-import org.andrea.collection.WorkerManager;
+import org.andrea.collection.MusicBandManager;
 import org.andrea.commands.CommandType;
 import org.andrea.commands.ServerCommandManager;
 import org.andrea.connection.AnswerMsg;
 import org.andrea.connection.Request;
 import org.andrea.connection.Response;
 import org.andrea.connection.SenderReceiver;
-import org.andrea.data.Worker;
+import org.andrea.data.MusicBand;
 import org.andrea.database.DatabaseHandler;
 import org.andrea.database.UserDatabaseManager;
-import org.andrea.database.WorkerDatabaseManager;
+import org.andrea.database.MusicBandDatabaseManager;
 import org.andrea.exceptions.*;
 import org.andrea.log.Log;
 
@@ -32,7 +32,7 @@ import java.util.concurrent.Executors;
 public class Server extends Thread implements SenderReceiver {
     public final int MAX_CLIENTS = 10;
 
-    private WorkerManager collectionManager;
+    private MusicBandManager collectionManager;
     private ServerCommandManager commandManager;
     private DatabaseHandler databaseHandler;
     private UserManager userManager;
@@ -66,7 +66,7 @@ public class Server extends Thread implements SenderReceiver {
 
         databaseHandler = new DatabaseHandler(properties.getProperty("url"), properties.getProperty("user"), properties.getProperty("password"));
         userManager = new UserDatabaseManager(databaseHandler);
-        collectionManager = new WorkerDatabaseManager(databaseHandler, userManager);
+        collectionManager = new MusicBandDatabaseManager(databaseHandler, userManager);
         commandManager = new ServerCommandManager(this);
 
 
@@ -157,10 +157,10 @@ public class Server extends Thread implements SenderReceiver {
         AnswerMsg answerMsg = new AnswerMsg();
         try {
 
-            Worker worker = request.getWorker();
+            MusicBand musicBand = request.getBand();
 
-            if (worker != null) {
-                worker.setCreationDate(new Date());
+            if (musicBand != null) {
+                musicBand.setCreationDate(new Date());
             }
             request.setStatus(Request.Status.RECEIVED_BY_SERVER);
 
@@ -233,7 +233,7 @@ public class Server extends Thread implements SenderReceiver {
         }
     }
 
-    public WorkerManager getCollectionManager() {
+    public MusicBandManager getCollectionManager() {
         return collectionManager;
     }
 

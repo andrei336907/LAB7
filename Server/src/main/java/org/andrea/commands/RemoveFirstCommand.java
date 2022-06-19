@@ -1,15 +1,15 @@
 package org.andrea.commands;
 
 import org.andrea.auth.User;
-import org.andrea.collection.WorkerManager;
+import org.andrea.collection.MusicBandManager;
 import org.andrea.exceptions.AuthException;
 import org.andrea.exceptions.EmptyCollectionException;
 import org.andrea.exceptions.InvalidDataException;
 
 public class RemoveFirstCommand extends CommandImpl {
-    private final WorkerManager collectionManager;
+    private final MusicBandManager collectionManager;
 
-    public RemoveFirstCommand(WorkerManager cm) {
+    public RemoveFirstCommand(MusicBandManager cm) {
         super("remove_first", CommandType.NORMAL);
         collectionManager = cm;
     }

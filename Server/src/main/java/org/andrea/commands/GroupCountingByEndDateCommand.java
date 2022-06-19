@@ -2,7 +2,7 @@ package org.andrea.commands;
 
 
 
-import org.andrea.collection.WorkerManager;
+import org.andrea.collection.MusicBandManager;
 
 import java.time.LocalDate;
 import java.util.Map;
@@ -11,9 +11,9 @@ import static org.andrea.utils.DateConverter.dateToString;
 
 
 public class GroupCountingByEndDateCommand extends CommandImpl {
-    private final WorkerManager collectionManager;
+    private final MusicBandManager collectionManager;
 
-    public GroupCountingByEndDateCommand(WorkerManager cm) {
+    public GroupCountingByEndDateCommand(MusicBandManager cm) {
         super("group_counting_by_end_date", CommandType.NORMAL);
         collectionManager = cm;
     }

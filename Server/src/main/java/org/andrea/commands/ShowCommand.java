@@ -1,13 +1,13 @@
 package org.andrea.commands;
 
 
-import org.andrea.collection.WorkerManager;
+import org.andrea.collection.MusicBandManager;
 import org.andrea.exceptions.EmptyCollectionException;
 
 public class ShowCommand extends CommandImpl {
-    private final WorkerManager collectionManager;
+    private final MusicBandManager collectionManager;
 
-    public ShowCommand(WorkerManager cm) {
+    public ShowCommand(MusicBandManager cm) {
         super("show", CommandType.NORMAL);
         collectionManager = cm;
     }

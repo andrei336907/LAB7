@@ -1,14 +1,14 @@
 package org.andrea.commands;
 
 
-import org.andrea.collection.WorkerManager;
+import org.andrea.collection.MusicBandManager;
 import org.andrea.exceptions.InvalidDataException;
 
 
 public class InfoCommand extends CommandImpl {
-    private final WorkerManager collectionManager;
+    private final MusicBandManager collectionManager;
 
-    public InfoCommand(WorkerManager cm) {
+    public InfoCommand(MusicBandManager cm) {
         super("info", CommandType.NORMAL);
         collectionManager = cm;
     }

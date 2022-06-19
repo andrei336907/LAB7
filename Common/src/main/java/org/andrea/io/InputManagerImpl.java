@@ -7,6 +7,7 @@ import org.andrea.data.*;
 import org.andrea.exceptions.*;
 
 import java.time.LocalDate;
+import java.util.Locale;
 import java.util.Scanner;
 
 import static org.andrea.utils.DateConverter.parseLocalDate;
@@ -84,7 +85,7 @@ public abstract class InputManagerImpl implements InputManager {
         return coord;
     }
 
-    public long readSalary() throws InvalidNumberException {
+    public long readFollowers() throws InvalidNumberException {
         Long s;
         try {
             s = Long.parseLong(read());
@@ -106,8 +107,8 @@ public abstract class InputManagerImpl implements InputManager {
         }
     }
 
-    public Genre readPosition() throws InvalidEnumException {
-        String s = read();
+    public Genre readGenre() throws InvalidEnumException {
+        String s = read().toUpperCase(Locale.ROOT);
         if (s.equals("")) {
             return null;
         } else {
@@ -120,7 +121,7 @@ public abstract class InputManagerImpl implements InputManager {
     }
 
     public Status readStatus() throws InvalidEnumException {
-        String s = read();
+        String s = read().toUpperCase(Locale.ROOT);
         try {
             return Status.valueOf(s);
         } catch (IllegalArgumentException e) {
@@ -128,34 +129,34 @@ public abstract class InputManagerImpl implements InputManager {
         }
     }
 
-    public OrganizationType readOrganizationType() throws InvalidEnumException {
-        String s = read();
+    public AlbumType readAlbumType() throws InvalidEnumException {
+        String s = read().toUpperCase(Locale.ROOT);
         try {
-            return OrganizationType.valueOf(s);
+            return AlbumType.valueOf(s);
         } catch (IllegalArgumentException e) {
             throw new InvalidEnumException();
         }
     }
 
-    public Organization readOrganization() throws InvalidDataException {
+    public BestAlbum readAlbum() throws InvalidDataException {
         String fullName = readFullName();
-        OrganizationType orgType = readOrganizationType();
-        return new Organization(fullName, orgType);
+        AlbumType orgType = readAlbumType();
+        return new BestAlbum(fullName, orgType);
     }
 
-    public Worker readWorker() throws InvalidDataException {
-        Worker worker = null;
+    public MusicBand readBand() throws InvalidDataException {
+        MusicBand musicBand = null;
 
         String name = readName();
         Coordinates coords = readCoords();
-        long salary = readSalary();
+        long followers = readFollowers();
         LocalDate date = readEndDate();
-        Genre pos = readPosition();
+        Genre pos = readGenre();
         Status stat = readStatus();
-        Organization org = readOrganization();
-        worker = new DefaultWorker(name, coords, salary, date, pos, stat, org);
+        BestAlbum org = readAlbum();
+        musicBand = new DefaultMusicBand(name, coords, followers, date, pos, stat, org);
 
-        return worker;
+        return musicBand;
 
     }
 
@@ -178,7 +179,7 @@ public abstract class InputManagerImpl implements InputManager {
     public CommandMsg readCommand() {
         String cmd = read();
         String arg = null;
-        Worker worker = null;
+        MusicBand musicBand = null;
         User user = null;
         if (cmd.contains(" ")) { //if command has argument
             String[] arr = cmd.split(" ", 2);
@@ -187,7 +188,7 @@ public abstract class InputManagerImpl implements InputManager {
         }
         if (cmd.equals("add") || cmd.equals("add_if_min") || cmd.equals("add_if_max") || cmd.equals("update")) {
             try {
-                worker = readWorker();
+                musicBand = readBand();
             } catch (InvalidDataException ignored) {
             }
         } else if (cmd.equals("login") || cmd.equals("register")) {
@@ -197,6 +198,6 @@ public abstract class InputManagerImpl implements InputManager {
             }
             return new CommandMsg(cmd, null, null, user);
         }
-        return new CommandMsg(cmd, arg, worker);
+        return new CommandMsg(cmd, arg, musicBand);
     }
 }

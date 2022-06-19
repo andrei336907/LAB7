@@ -1,19 +1,19 @@
 package org.andrea.commands;
 
 
-import org.andrea.collection.WorkerManager;
+import org.andrea.collection.MusicBandManager;
 
 public class AddIfMaxCommand extends CommandImpl {
-    private final WorkerManager collectionManager;
+    private final MusicBandManager collectionManager;
 
-    public AddIfMaxCommand(WorkerManager cm) {
+    public AddIfMaxCommand(MusicBandManager cm) {
         super("add_if_max", CommandType.NORMAL);
         collectionManager = cm;
     }
 
     @Override
     public String execute() {
-        collectionManager.addIfMax(getWorkerArg());
-        return ("Added element: " + getWorkerArg().toString());
+        collectionManager.addIfMax(getBandArg());
+        return ("Added element: " + getBandArg().toString());
     }
 }

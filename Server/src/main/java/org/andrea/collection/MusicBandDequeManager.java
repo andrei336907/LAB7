@@ -6,7 +6,7 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonParseException;
 
 import com.google.gson.reflect.TypeToken;
-import org.andrea.data.Worker;
+import org.andrea.data.MusicBand;
 import org.andrea.exceptions.CannotAddException;
 import org.andrea.exceptions.CollectionException;
 import org.andrea.exceptions.EmptyCollectionException;
@@ -24,15 +24,15 @@ import java.util.stream.Collectors;
 /**
  * Operates collection.
  */
-public class WorkerDequeManager implements WorkerManager {
-    private Deque<Worker> collection;
+public class MusicBandDequeManager implements MusicBandManager {
+    private Deque<MusicBand> collection;
     private final java.time.LocalDateTime initDate;
     private final Set<Integer> uniqueIds;
 
     /**
      * Constructor, set start values
      */
-    public WorkerDequeManager() {
+    public MusicBandDequeManager() {
         uniqueIds = new ConcurrentSkipListSet<>();
         collection = new ConcurrentLinkedDeque<>();
         initDate = java.time.LocalDateTime.now();
@@ -51,7 +51,7 @@ public class WorkerDequeManager implements WorkerManager {
     }
 
     public void sort() {
-        collection = collection.stream().sorted(new Worker.SortingComparator()).collect(Collectors.toCollection(ConcurrentLinkedDeque::new));
+        collection = collection.stream().sorted(new MusicBand.SortingComparator()).collect(Collectors.toCollection(ConcurrentLinkedDeque::new));
     }
 
     /**
@@ -59,42 +59,42 @@ public class WorkerDequeManager implements WorkerManager {
      *
      * @return Collection
      */
-    public Deque<Worker> getCollection() {
+    public Deque<MusicBand> getCollection() {
         return collection;
     }
 
     /**
      * Add element to collection
      *
-     * @param worker Element of collection
+     * @param musicBand Element of collection
      */
-    public void add(Worker worker) {
+    public void add(MusicBand musicBand) {
         int id = generateNextId();
         uniqueIds.add(id);
-        worker.setId(id);
-        collection.add(worker);
+        musicBand.setId(id);
+        collection.add(musicBand);
     }
 
-    public Worker getByID(Integer id){
+    public MusicBand getByID(Integer id){
         assertNotEmpty();
-        Optional<Worker> worker = collection.stream()
+        Optional<MusicBand> band = collection.stream()
                 .filter(w -> w.getId() == id)
                 .findFirst();
-        if(!worker.isPresent()){
+        if(!band.isPresent()){
             throw new NoSuchIdException(id);
         }
-        return worker.get();
+        return band.get();
     }
-    protected void addWithoutIdGeneration(Worker worker){
-        uniqueIds.add(worker.getId());
-        collection.add(worker);
+    protected void addWithoutIdGeneration(MusicBand musicBand){
+        uniqueIds.add(musicBand.getId());
+        collection.add(musicBand);
     }
 
     protected void removeAll(Collection<Integer> ids){
         Iterator<Integer> iterator = ids.iterator();
         while (iterator.hasNext()){
             Integer id = iterator.next();
-            collection.removeIf(worker -> worker.getId()==id);
+            collection.removeIf(band -> band.getId()==id);
             iterator.remove();
         }
     }
@@ -105,7 +105,7 @@ public class WorkerDequeManager implements WorkerManager {
      * @return Information
      */
     public String getInfo() {
-        return "Database of Worker, size: " + collection.size() + ", initialization date: " + initDate.toString();
+        return "Database of MusicBand, size: " + collection.size() + ", initialization date: " + initDate.toString();
     }
 
     /**
@@ -129,13 +129,13 @@ public class WorkerDequeManager implements WorkerManager {
 
     public void removeByID(Integer id) {
         assertNotEmpty();
-        Optional<Worker> worker = collection.stream()
-                .filter(w -> w.getId() == id)
+        Optional<MusicBand> band = collection.stream()
+                .filter(b -> b.getId() == id)
                 .findFirst();
-        if(!worker.isPresent()){
+        if(!band.isPresent()){
             throw new NoSuchIdException(id);
         }
-        collection.remove(worker.get());
+        collection.remove(band.get());
         uniqueIds.remove(id);
     }
 
@@ -144,17 +144,17 @@ public class WorkerDequeManager implements WorkerManager {
      *
      * @param id ID
      */
-    public void updateByID(Integer id, Worker newWorker) {
+    public void updateByID(Integer id, MusicBand newMusicBand) {
         assertNotEmpty();
-        Optional<Worker> worker = collection.stream()
+        Optional<MusicBand> band = collection.stream()
                 .filter(w -> w.getId() == id)
                 .findFirst();
-        if (!worker.isPresent()) {
+        if (!band.isPresent()) {
             throw new NoSuchIdException(id);
         }
-        collection.remove(worker.get());
-        newWorker.setId(id);
-        collection.add(newWorker);
+        collection.remove(band.get());
+        newMusicBand.setId(id);
+        collection.add(newMusicBand);
     }
 
     /**
@@ -182,34 +182,34 @@ public class WorkerDequeManager implements WorkerManager {
     /**
      * Add if ID of element bigger than max in collection
      *
-     * @param worker Element
+     * @param musicBand Element
      */
-    public void addIfMax(Worker worker) {
+    public void addIfMax(MusicBand musicBand) {
         if (collection.stream()
-                .max(Worker::compareTo)
-                .filter(w -> w.compareTo(worker) == 1)
+                .max(MusicBand::compareTo)
+                .filter(w -> w.compareTo(musicBand) == 1)
                 .isPresent()) {
             throw new CannotAddException();
         }
-        add(worker);
+        add(musicBand);
     }
 
     /**
      * Add if ID of element smaller than min in collection
      *
-     * @param worker Element
+     * @param musicBand Element
      */
-    public void addIfMin(Worker worker) {
+    public void addIfMin(MusicBand musicBand) {
         if (collection.stream()
-                .min(Worker::compareTo)
-                .filter(w -> w.compareTo(worker) < 0)
+                .min(MusicBand::compareTo)
+                .filter(w -> w.compareTo(musicBand) < 0)
                 .isPresent()) {
             throw new CannotAddException();
         }
-        add(worker);
+        add(musicBand);
     }
 
-    public List<Worker> filterStartsWithName(String start) {
+    public List<MusicBand> filterStartsWithName(String start) {
         assertNotEmpty();
         return collection.stream()
                 .filter(w -> w.getName().startsWith(start.trim()))
@@ -220,9 +220,9 @@ public class WorkerDequeManager implements WorkerManager {
         assertNotEmpty();
         HashMap<LocalDate, Integer> map = new HashMap<>();
         collection.stream()
-                .filter((worker -> worker.getEndDate() != null))
+                .filter((worker -> worker.getBirthBandDate() != null))
                 .forEach((worker) -> {
-                    LocalDate endDate = worker.getEndDate();
+                    LocalDate endDate = worker.getBirthBandDate();
                     if (map.containsKey(endDate)) {
                         Integer q = map.get(endDate);
                         map.replace(endDate, q + 1);
@@ -233,11 +233,11 @@ public class WorkerDequeManager implements WorkerManager {
         return map;
     }
 
-    public List<Long> getUniqueSalaries() {
+    public List<Long> getUniqueFollowers() {
         assertNotEmpty();
         List<Long> salaries = new LinkedList<>();
         salaries = collection.stream()
-                .map(Worker::getSalary)
+                .map(MusicBand::getFollowers)
                 .distinct()
                 .collect(Collectors.toList());
         return salaries;
@@ -248,7 +248,7 @@ public class WorkerDequeManager implements WorkerManager {
             if (json == null || json.equals("")) {
                 collection = new ConcurrentLinkedDeque<>();
             } else {
-                Type collectionType = new TypeToken<Queue<Worker>>() {
+                Type collectionType = new TypeToken<Queue<MusicBand>>() {
                 }.getType();
                 Gson gson = new GsonBuilder()
                         .registerTypeAdapter(LocalDate.class, new LocalDateDeserializer())

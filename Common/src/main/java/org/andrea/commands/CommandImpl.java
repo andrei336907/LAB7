@@ -4,7 +4,7 @@ package org.andrea.commands;
 import org.andrea.connection.AnswerMsg;
 import org.andrea.connection.Request;
 import org.andrea.connection.Response;
-import org.andrea.data.Worker;
+import org.andrea.data.MusicBand;
 import org.andrea.exceptions.*;
 
 /**
@@ -65,8 +65,8 @@ public abstract class CommandImpl implements Command {
         return arg != null && arg.getStringArg() != null && !arg.getStringArg().equals("");
     }
 
-    public boolean hasWorkerArg() {
-        return arg != null && arg.getWorker() != null;
+    public boolean hasBandArg() {
+        return arg != null && arg.getBand() != null;
     }
 
     public boolean hasUserArg() {
@@ -77,7 +77,7 @@ public abstract class CommandImpl implements Command {
         return getArgument().getStringArg();
     }
 
-    public Worker getWorkerArg() {
-        return getArgument().getWorker();
+    public MusicBand getBandArg() {
+        return getArgument().getBand();
     }
 }

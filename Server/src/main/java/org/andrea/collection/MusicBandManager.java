@@ -2,7 +2,7 @@ package org.andrea.collection;
 
 
 
-import org.andrea.data.Worker;
+import org.andrea.data.MusicBand;
 
 import java.time.LocalDate;
 import java.util.Collection;
@@ -13,21 +13,21 @@ import java.util.Map;
  * interface for storing elements
  *
  */
-public interface WorkerManager {
+public interface MusicBandManager {
 
     /**
      * sorts collection
      */
     void sort();
 
-    Collection<Worker> getCollection();
+    Collection<MusicBand> getCollection();
 
     /**
      * adds new element
      *
      * @param element
      */
-    void add(Worker element);
+    void add(MusicBand element);
 
     /**
      * get information about collection
@@ -57,12 +57,12 @@ public interface WorkerManager {
      * @param id
      * @param newElement
      */
-    void updateByID(Integer id, Worker newElement);
+    void updateByID(Integer id, MusicBand newElement);
 
 
     void clear();
 
-    public Worker getByID(Integer id);
+    public MusicBand getByID(Integer id);
 
     void removeFirst();
 
@@ -71,21 +71,21 @@ public interface WorkerManager {
      *
      * @param element
      */
-    void addIfMax(Worker element);
+    void addIfMax(MusicBand element);
 
     /**
      * adds element if it is smaller than min
      *
      * @param element
      */
-    void addIfMin(Worker element);
+    void addIfMin(MusicBand element);
 
     /**
      * print all elements which name starts with substring
      *
      * @param start
      */
-    List<Worker> filterStartsWithName(String start);
+    List<MusicBand> filterStartsWithName(String start);
 
     /**
      * @return map of dates with quantity
@@ -93,9 +93,9 @@ public interface WorkerManager {
     Map<LocalDate, Integer> groupByEndDate();
 
     /**
-     * print all unique values of salary field
+     * print all unique values of followers field
      */
-    List<Long> getUniqueSalaries();
+    List<Long> getUniqueFollowers();
 
     /**
      * convert collection to json

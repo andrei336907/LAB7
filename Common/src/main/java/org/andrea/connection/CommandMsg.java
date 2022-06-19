@@ -2,7 +2,7 @@ package org.andrea.connection;
 
 
 import org.andrea.auth.User;
-import org.andrea.data.Worker;
+import org.andrea.data.MusicBand;
 
 /**
  * Message witch include command and arguments
@@ -10,22 +10,22 @@ import org.andrea.data.Worker;
 public class CommandMsg implements Request {
     private final String commandName;
     private final String commandStringArgument;
-    private final Worker worker;
+    private final MusicBand musicBand;
     private User user;
     private Status status;
 
-    public CommandMsg(String commandNm, String commandSA, Worker w) {
+    public CommandMsg(String commandNm, String commandSA, MusicBand w) {
         commandName = commandNm;
         commandStringArgument = commandSA;
-        worker = w;
+        musicBand = w;
         user = null;
         status = Status.DEFAULT;
     }
 
-    public CommandMsg(String commandNm, String commandSA, Worker w, User usr) {
+    public CommandMsg(String commandNm, String commandSA, MusicBand w, User usr) {
         commandName = commandNm;
         commandStringArgument = commandSA;
-        worker = w;
+        musicBand = w;
         user = usr;
         status = Status.DEFAULT;
     }
@@ -55,8 +55,8 @@ public class CommandMsg implements Request {
     /**
      * @return Command object argument.
      */
-    public Worker getWorker() {
-        return worker;
+    public MusicBand getBand() {
+        return musicBand;
     }
 
     public User getUser() {
